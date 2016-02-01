@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C340020D1C5FB96400E798E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C340020C1C5FB96400E798E1 /* Images.xcassets */; };
+		C34002111C5FC13700E798E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002101C5FC13700E798E1 /* AudioToolbox.framework */; };
+		C34002131C5FC13E00E798E1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002121C5FC13E00E798E1 /* CFNetwork.framework */; };
+		C34002151C5FC14600E798E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002141C5FC14600E798E1 /* CoreGraphics.framework */; };
+		C34002171C5FC14D00E798E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002161C5FC14D00E798E1 /* CoreLocation.framework */; };
+		C34002191C5FC15400E798E1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002181C5FC15400E798E1 /* QuartzCore.framework */; };
+		C340021B1C5FC15B00E798E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C340021A1C5FC15B00E798E1 /* Security.framework */; };
+		C340021D1C5FC16200E798E1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C340021C1C5FC16200E798E1 /* StoreKit.framework */; };
+		C340021F1C5FC16800E798E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C340021E1C5FC16800E798E1 /* SystemConfiguration.framework */; };
+		C34002211C5FC16F00E798E1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002201C5FC16F00E798E1 /* libz.tbd */; };
+		C34002231C5FC17400E798E1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002221C5FC17400E798E1 /* libsqlite3.tbd */; };
+		C34002251C5FC1B800E798E1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002241C5FC1B800E798E1 /* Bolts.framework */; };
+		C34002271C5FC1C000E798E1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002261C5FC1C000E798E1 /* Parse.framework */; };
 		C34F7C241C5FB32900E10F8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F7C231C5FB32900E10F8A /* LoginViewController.swift */; };
 		C34F7C261C5FB34700E10F8A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F7C251C5FB34700E10F8A /* SignupViewController.swift */; };
 		C3761B5C1C5F87680076762F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3761B5B1C5F87680076762F /* AppDelegate.swift */; };
@@ -37,6 +49,18 @@
 
 /* Begin PBXFileReference section */
 		C340020C1C5FB96400E798E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C34002101C5FC13700E798E1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C34002121C5FC13E00E798E1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C34002141C5FC14600E798E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C34002161C5FC14D00E798E1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C34002181C5FC15400E798E1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C340021A1C5FC15B00E798E1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C340021C1C5FC16200E798E1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C340021E1C5FC16800E798E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C34002201C5FC16F00E798E1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C34002221C5FC17400E798E1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C34002241C5FC1B800E798E1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C34002261C5FC1C000E798E1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C34F7C231C5FB32900E10F8A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C34F7C251C5FB34700E10F8A /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C3761B581C5F87680076762F /* MyTinyEnglishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTinyEnglishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +82,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34002231C5FC17400E798E1 /* libsqlite3.tbd in Frameworks */,
+				C34002211C5FC16F00E798E1 /* libz.tbd in Frameworks */,
+				C340021F1C5FC16800E798E1 /* SystemConfiguration.framework in Frameworks */,
+				C340021D1C5FC16200E798E1 /* StoreKit.framework in Frameworks */,
+				C340021B1C5FC15B00E798E1 /* Security.framework in Frameworks */,
+				C34002191C5FC15400E798E1 /* QuartzCore.framework in Frameworks */,
+				C34002171C5FC14D00E798E1 /* CoreLocation.framework in Frameworks */,
+				C34002151C5FC14600E798E1 /* CoreGraphics.framework in Frameworks */,
+				C34002251C5FC1B800E798E1 /* Bolts.framework in Frameworks */,
+				C34002131C5FC13E00E798E1 /* CFNetwork.framework in Frameworks */,
+				C34002271C5FC1C000E798E1 /* Parse.framework in Frameworks */,
+				C34002111C5FC13700E798E1 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +114,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C340020F1C5FC0AB00E798E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C34002201C5FC16F00E798E1 /* libz.tbd */,
+				C34002221C5FC17400E798E1 /* libsqlite3.tbd */,
+				C340021E1C5FC16800E798E1 /* SystemConfiguration.framework */,
+				C340021C1C5FC16200E798E1 /* StoreKit.framework */,
+				C340021A1C5FC15B00E798E1 /* Security.framework */,
+				C34002181C5FC15400E798E1 /* QuartzCore.framework */,
+				C34002161C5FC14D00E798E1 /* CoreLocation.framework */,
+				C34002141C5FC14600E798E1 /* CoreGraphics.framework */,
+				C34002121C5FC13E00E798E1 /* CFNetwork.framework */,
+				C34002101C5FC13700E798E1 /* AudioToolbox.framework */,
+				C34002261C5FC1C000E798E1 /* Parse.framework */,
+				C34002241C5FC1B800E798E1 /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C34F7C221C5FAE1900E10F8A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +166,7 @@
 		C3761B5A1C5F87680076762F /* MyTinyEnglishApp */ = {
 			isa = PBXGroup;
 			children = (
+				C340020F1C5FC0AB00E798E1 /* Frameworks */,
 				C34F7C221C5FAE1900E10F8A /* Controllers */,
 				C3761B5B1C5F87680076762F /* AppDelegate.swift */,
 				C340020C1C5FB96400E798E1 /* Images.xcassets */,
@@ -415,6 +471,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyTinyEnglishApp",
+				);
 				INFOPLIST_FILE = MyTinyEnglishApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = None.MyTinyEnglishApp;
@@ -426,6 +486,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyTinyEnglishApp",
+				);
 				INFOPLIST_FILE = MyTinyEnglishApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = None.MyTinyEnglishApp;
