@@ -62,6 +62,8 @@ class RegisterViewController: UIViewController {
                 } else {
                     var alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
+                    
+                    //TODO: see again
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") as! UIViewController
                         self.presentViewController(viewController, animated: true, completion: nil)

@@ -32,6 +32,9 @@
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="154" y="269" width="52" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="logoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPs-et-2lK"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2Q-Xf-0lR">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -118,15 +121,6 @@
                                             <rect key="frame" x="108" y="139" width="145" height="30"/>
                                         </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6F3-Yu-aGF">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Login">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="161" y="190" width="38" height="30"/>
-                                        </variation>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQd-Es-jML">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -136,6 +130,16 @@
                                         </variation>
                                         <connections>
                                             <segue destination="jj1-2e-Ozo" kind="presentation" id="uPv-Iu-6HG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8a-KA-Qpg">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="161" y="189" width="38" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="loginAction:" destination="Ksz-Th-Gbc" eventType="touchUpInside" id="NZe-Ql-gXe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -152,8 +156,8 @@
                                     <mask key="subviews">
                                         <exclude reference="Lda-8X-6GR"/>
                                         <exclude reference="WRb-eq-H4x"/>
-                                        <exclude reference="6F3-Yu-aGF"/>
                                         <exclude reference="BQd-Es-jML"/>
+                                        <exclude reference="F8a-KA-Qpg"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -161,8 +165,8 @@
                                     <mask key="subviews">
                                         <include reference="Lda-8X-6GR"/>
                                         <include reference="WRb-eq-H4x"/>
-                                        <include reference="6F3-Yu-aGF"/>
                                         <include reference="BQd-Es-jML"/>
+                                        <include reference="F8a-KA-Qpg"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -187,6 +191,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="WRb-eq-H4x" id="5b9-p0-4pt"/>
+                        <outlet property="usernameTextField" destination="Lda-8X-6GR" id="2We-xR-hnF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWI-fT-okp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
