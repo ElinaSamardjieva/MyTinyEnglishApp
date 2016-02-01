@@ -17,7 +17,7 @@ with time.
 He also could take pictures of different things in his surrounding in addition to remember words with his own pictures that will be familiar for him in his own language.
 
 
-He also will be able to study his words when seeing them. When tapping on them to see their translation in his own language. 
+He also will be able to study his words when seeing them. When tapping on one word he will see its translation in his own language. 
 
 ## Functionality
 
