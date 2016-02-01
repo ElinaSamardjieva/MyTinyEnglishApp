@@ -11,6 +11,8 @@ import Parse
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     override func viewWillAppear(animated: Bool) {
         if (PFUser.currentUser() == nil) {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -23,6 +25,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Show the current visitor's username
+        if let pUserName = PFUser.currentUser()?["username"] as? String {
+            self.usernameLabel.text = "Hello, @" + pUserName + "!"
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
