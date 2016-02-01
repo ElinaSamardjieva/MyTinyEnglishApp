@@ -1,7 +1,7 @@
-## MyTinyEnglishApp
+# MyTinyEnglishApp
 Little app about studying English
 
-# What is all about
+## What is all about
 
 The concept of the app is to help the user with studying English in his own personal way. 
 The user will have different options to study.
@@ -19,7 +19,7 @@ He also will be able to make pictures of different things in his surrounding in 
 
 He also will be able to study his words when seeing them and tapping on them to see their translation in his own language. 
 
-# Functionality
+## Functionality
 
 - Using APIs for:
   - Recording audio
