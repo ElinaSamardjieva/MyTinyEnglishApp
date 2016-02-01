@@ -21,7 +21,7 @@
 		C34002251C5FC1B800E798E1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002241C5FC1B800E798E1 /* Bolts.framework */; };
 		C34002271C5FC1C000E798E1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002261C5FC1C000E798E1 /* Parse.framework */; };
 		C34F7C241C5FB32900E10F8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F7C231C5FB32900E10F8A /* LoginViewController.swift */; };
-		C34F7C261C5FB34700E10F8A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F7C251C5FB34700E10F8A /* SignupViewController.swift */; };
+		C34F7C261C5FB34700E10F8A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F7C251C5FB34700E10F8A /* RegisterViewController.swift */; };
 		C3761B5C1C5F87680076762F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3761B5B1C5F87680076762F /* AppDelegate.swift */; };
 		C3761B5E1C5F87680076762F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3761B5D1C5F87680076762F /* HomeViewController.swift */; };
 		C3761B611C5F87680076762F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3761B5F1C5F87680076762F /* Main.storyboard */; };
@@ -62,7 +62,7 @@
 		C34002241C5FC1B800E798E1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C34002261C5FC1C000E798E1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C34F7C231C5FB32900E10F8A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C34F7C251C5FB34700E10F8A /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		C34F7C251C5FB34700E10F8A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C3761B581C5F87680076762F /* MyTinyEnglishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTinyEnglishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3761B5B1C5F87680076762F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3761B5D1C5F87680076762F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -133,12 +133,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C347C0DB1C5FC9DD00DB1782 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3761B5F1C5F87680076762F /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C347C0DC1C5FC9F000DB1782 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C340020C1C5FB96400E798E1 /* Images.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C347C0DD1C5FCA0D00DB1782 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C3761B641C5F87680076762F /* LaunchScreen.storyboard */,
+				C3761B671C5F87680076762F /* Info.plist */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		C34F7C221C5FAE1900E10F8A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				C3761B5D1C5F87680076762F /* HomeViewController.swift */,
 				C34F7C231C5FB32900E10F8A /* LoginViewController.swift */,
-				C34F7C251C5FB34700E10F8A /* SignupViewController.swift */,
+				C34F7C251C5FB34700E10F8A /* RegisterViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -167,12 +192,11 @@
 			isa = PBXGroup;
 			children = (
 				C340020F1C5FC0AB00E798E1 /* Frameworks */,
-				C34F7C221C5FAE1900E10F8A /* Controllers */,
 				C3761B5B1C5F87680076762F /* AppDelegate.swift */,
-				C340020C1C5FB96400E798E1 /* Images.xcassets */,
-				C3761B5F1C5F87680076762F /* Main.storyboard */,
-				C3761B641C5F87680076762F /* LaunchScreen.storyboard */,
-				C3761B671C5F87680076762F /* Info.plist */,
+				C34F7C221C5FAE1900E10F8A /* Controllers */,
+				C347C0DB1C5FC9DD00DB1782 /* View */,
+				C347C0DC1C5FC9F000DB1782 /* Images */,
+				C347C0DD1C5FCA0D00DB1782 /* Helpers */,
 			);
 			path = MyTinyEnglishApp;
 			sourceTree = "<group>";
@@ -328,7 +352,7 @@
 			files = (
 				C34F7C241C5FB32900E10F8A /* LoginViewController.swift in Sources */,
 				C3761B5E1C5F87680076762F /* HomeViewController.swift in Sources */,
-				C34F7C261C5FB34700E10F8A /* SignupViewController.swift in Sources */,
+				C34F7C261C5FB34700E10F8A /* RegisterViewController.swift in Sources */,
 				C3761B5C1C5F87680076762F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyTinyEnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyTinyEnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -90,7 +90,7 @@
         <!--Login View Controller-->
         <scene sceneID="G6N-5y-ugV">
             <objects>
-                <viewController id="Ksz-Th-Gbc" customClass="LoginViewController" customModule="MyTinyEnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="Ksz-Th-Gbc" customClass="LoginViewController" customModule="MyTinyEnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BmL-VF-aog"/>
                         <viewControllerLayoutGuide type="bottom" id="02r-Wr-qeg"/>
@@ -134,6 +134,9 @@
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="104" y="289" width="153" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <segue destination="jj1-2e-Ozo" kind="presentation" id="uPv-Iu-6HG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -187,12 +190,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWI-fT-okp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="-226"/>
+            <point key="canvasLocation" x="1062" y="-226"/>
         </scene>
-        <!--Signup View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="yzw-FZ-tQR">
             <objects>
-                <viewController id="jj1-2e-Ozo" customClass="SignupViewController" customModule="MyTinyEnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jj1-2e-Ozo" customClass="RegisterViewController" customModule="MyTinyEnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x00-8F-8Jo"/>
                         <viewControllerLayoutGuide type="bottom" id="6vN-Vt-FdA"/>
@@ -204,13 +207,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRj-RL-Btv">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzz-N3-27Z">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Register"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="145" y="213" width="57" height="30"/>
-                                        </variation>
-                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4Y-SG-VVd">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -224,7 +220,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="102" y="99" width="143" height="30"/>
+                                            <rect key="frame" x="102" y="92" width="143" height="30"/>
                                         </variation>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cag-5T-2jY">
@@ -235,8 +231,18 @@
                                             <rect key="frame" x="102" y="137" width="143" height="30"/>
                                         </variation>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4M-7w-uxQ">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="150" y="220" width="46" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="registerAction:" destination="jj1-2e-Ozo" eventType="touchUpInside" id="x7y-Vl-Hqe"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="0"/>
@@ -247,19 +253,19 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="Uzz-N3-27Z"/>
                                         <exclude reference="G4Y-SG-VVd"/>
                                         <exclude reference="Z7a-Nv-dev"/>
                                         <exclude reference="Cag-5T-2jY"/>
+                                        <exclude reference="t4M-7w-uxQ"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="115" width="360" height="360"/>
                                     <mask key="subviews">
-                                        <include reference="Uzz-N3-27Z"/>
                                         <include reference="G4Y-SG-VVd"/>
                                         <include reference="Z7a-Nv-dev"/>
                                         <include reference="Cag-5T-2jY"/>
+                                        <include reference="t4M-7w-uxQ"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -276,6 +282,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="G4Y-SG-VVd" id="KgS-DB-FTI"/>
+                        <outlet property="passwordTextField" destination="Cag-5T-2jY" id="pfc-eI-iFj"/>
+                        <outlet property="usernameTextField" destination="Z7a-Nv-dev" id="dFe-dZ-vUK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1U7-VX-Qge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,7 +308,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fst-r0-Lk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.5" y="473"/>
+            <point key="canvasLocation" x="280.5" y="473"/>
         </scene>
     </scenes>
     <resources>
