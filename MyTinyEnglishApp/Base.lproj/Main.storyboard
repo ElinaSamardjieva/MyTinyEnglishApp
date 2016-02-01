@@ -108,18 +108,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLZ-8E-MkX">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lda-8X-6GR">
-                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="108" y="101" width="145" height="30"/>
-                                        </variation>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRb-eq-H4x">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="108" y="139" width="145" height="30"/>
                                         </variation>
@@ -145,6 +137,14 @@
                                             <action selector="loginAction:" destination="Ksz-Th-Gbc" eventType="touchUpInside" id="NZe-Ql-gXe"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lda-8X-6GR">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="108" y="101" width="145" height="30"/>
+                                        </variation>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -157,19 +157,19 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="Lda-8X-6GR"/>
                                         <exclude reference="WRb-eq-H4x"/>
                                         <exclude reference="BQd-Es-jML"/>
                                         <exclude reference="F8a-KA-Qpg"/>
+                                        <exclude reference="Lda-8X-6GR"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="99" width="360" height="360"/>
                                     <mask key="subviews">
-                                        <include reference="Lda-8X-6GR"/>
                                         <include reference="WRb-eq-H4x"/>
                                         <include reference="BQd-Es-jML"/>
                                         <include reference="F8a-KA-Qpg"/>
+                                        <include reference="Lda-8X-6GR"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -237,16 +237,16 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cag-5T-2jY">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="102" y="137" width="143" height="30"/>
                                         </variation>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4M-7w-uxQ">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Register"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="150" y="220" width="46" height="30"/>
+                                            <rect key="frame" x="145" y="220" width="57" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="registerAction:" destination="jj1-2e-Ozo" eventType="touchUpInside" id="x7y-Vl-Hqe"/>
