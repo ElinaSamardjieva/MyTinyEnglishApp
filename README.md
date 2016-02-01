@@ -17,7 +17,7 @@ with time.
 He also could take pictures of different things in his surrounding in addition to remember words with his own pictures that will be familiar for him in his own language.
 
 
-He also will be able to study his words when seeing them and tapping on them to see their translation in his own language. 
+He also will be able to study his words when seeing them. When tapping on them to see their translation in his own language. 
 
 ## Functionality
 
@@ -27,4 +27,5 @@ He also will be able to study his words when seeing them and tapping on them to 
   - Taking pictures
 
 - Using Parse.com for making Registration and Login and saving it in remote database
+- Adding new words and their translation
 
