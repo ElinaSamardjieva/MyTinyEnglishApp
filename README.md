@@ -7,7 +7,7 @@ The concept of the app is to help the user with studying English in his own pers
 The user will have different options to study.
 
 
-He will able to listen the pronounciation of different words and getting familiar with it. 
+He will be able to listen the pronounciation of different words and getting familiar with it. 
 
 
 After that he will be able to record his own voice and to compare the app's pronounciation with his own and to improve it 
