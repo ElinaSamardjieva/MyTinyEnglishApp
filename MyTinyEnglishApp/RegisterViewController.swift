@@ -17,7 +17,11 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Turning off the Autocorrection
+        emailTextField.autocorrectionType = .No
+        usernameTextField.autocorrectionType = .No
+        
         // Do any additional setup after loading the view.
     }
 
@@ -29,6 +33,8 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerAction(sender: AnyObject) {
         var email = self.emailTextField.text
+
+        
         var username = self.usernameTextField.text
         var password = self.passwordTextField.text
         

@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Turning off the Autocorrection
+        usernameTextField.autocorrectionType = .No
         // Do any additional setup after loading the view.
     }
 
