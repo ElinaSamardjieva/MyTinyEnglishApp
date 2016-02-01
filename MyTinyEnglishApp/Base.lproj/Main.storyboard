@@ -180,7 +180,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.7414464013449148" blue="0.85235152806336245" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.37437540330341534" green="0.33372018680833582" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="wLZ-8E-MkX"/>
@@ -252,6 +252,14 @@
                                             <action selector="registerAction:" destination="jj1-2e-Ozo" eventType="touchUpInside" id="x7y-Vl-Hqe"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UuE-6U-N4t">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="102" y="182" width="143" height="30"/>
+                                        </variation>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -268,6 +276,7 @@
                                         <exclude reference="Z7a-Nv-dev"/>
                                         <exclude reference="Cag-5T-2jY"/>
                                         <exclude reference="t4M-7w-uxQ"/>
+                                        <exclude reference="UuE-6U-N4t"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -277,6 +286,7 @@
                                         <include reference="Z7a-Nv-dev"/>
                                         <include reference="Cag-5T-2jY"/>
                                         <include reference="t4M-7w-uxQ"/>
+                                        <include reference="UuE-6U-N4t"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -294,6 +304,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="UuE-6U-N4t" id="QBq-LZ-Z6Z"/>
                         <outlet property="emailTextField" destination="G4Y-SG-VVd" id="KgS-DB-FTI"/>
                         <outlet property="passwordTextField" destination="Cag-5T-2jY" id="pfc-eI-iFj"/>
                         <outlet property="usernameTextField" destination="Z7a-Nv-dev" id="dFe-dZ-vUK"/>

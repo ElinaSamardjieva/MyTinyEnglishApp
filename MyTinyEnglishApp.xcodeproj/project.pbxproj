@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C323D5841C5FED670012F5FF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5831C5FED670012F5FF /* Validator.swift */; };
+		C323D5861C600C9F0012F5FF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5851C600C9F0012F5FF /* Message.swift */; };
 		C340020D1C5FB96400E798E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C340020C1C5FB96400E798E1 /* Images.xcassets */; };
 		C34002111C5FC13700E798E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002101C5FC13700E798E1 /* AudioToolbox.framework */; };
 		C34002131C5FC13E00E798E1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002121C5FC13E00E798E1 /* CFNetwork.framework */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		C323D5831C5FED670012F5FF /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		C323D5851C600C9F0012F5FF /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C340020C1C5FB96400E798E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C34002101C5FC13700E798E1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C34002121C5FC13E00E798E1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				C323D5831C5FED670012F5FF /* Validator.swift */,
+				C323D5851C600C9F0012F5FF /* Message.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				C3761B5E1C5F87680076762F /* HomeViewController.swift in Sources */,
 				C323D5841C5FED670012F5FF /* Validator.swift in Sources */,
 				C34F7C261C5FB34700E10F8A /* RegisterViewController.swift in Sources */,
+				C323D5861C600C9F0012F5FF /* Message.swift in Sources */,
 				C3761B5C1C5F87680076762F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

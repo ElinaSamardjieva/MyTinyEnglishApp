@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,22 +36,24 @@ class RegisterViewController: UIViewController {
         var email = self.emailTextField.text
         var username = self.usernameTextField.text
         var password = self.passwordTextField.text
+        var confirmPassword = self.confirmPasswordTextField.text
         
         let validator = Validator()
-        var isValidEmail = validator.isValidEmail(email!)
+        let message = Message()
+        var textError = ""
         
-        if(!isValidEmail) {
-            var errorMessage = UIAlertView(title: "Try again", message: "The input is invalid email", delegate: self, cancelButtonTitle: "OK")
-            errorMessage.show()
-            errorMessage.show()
-        }else if(email!.isEmpty) {
-            var errorMessage = UIAlertView(title: "Try again", message: "Email cannot be empty", delegate: self, cancelButtonTitle: "OK")
-            errorMessage.show()
-        } else if (username!.isEmpty) {
-            var errorMessage = UIAlertView(title: "Try again", message: "Username cannot be empty", delegate: self, cancelButtonTitle: "OK")
-            errorMessage.show()
-        } else if (username!.characters.count) < 2 {
-            var errorMessage = UIAlertView(title: "Try again", message: "Username must be longer than 2 symbols.", delegate: self, cancelButtonTitle: "OK")
+        if(!(validator.validateEmail(email!))) {
+            return
+        }else if(!(validator.validateEmail(email!))){
+            return
+        } else if (!(validator.validateUsername(username!))) {
+            return
+        } else if (!(validator.validatePassword(password!))){
+            return
+        } else if (!(validator.validateConfirmPassword(confirmPassword!))) {
+            return
+        } else if (!(validator.validateArePasswordsEqual(password!, inputConfirmPassword: confirmPassword!))) {
+            return
         } else {
             var spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
             spinner.startAnimating()
