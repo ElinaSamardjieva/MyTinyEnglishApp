@@ -14,16 +14,18 @@
 
 @implementation AudioViewController
 
+@synthesize recordingProgress;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 - (IBAction)playPauseButtonPressed:(UIButton *)sender {
     [self.textToSpeak resignFirstResponder];
@@ -32,14 +34,13 @@
     utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-au"];
     [self.synthesizer speakUtterance:utterance];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (IBAction)recordAudio:(id)sender {
+    recordingProgress.hidden = false;
 }
-*/
 
+- (IBAction)stopRecordingAudio:(id)sender {
+    recordingProgress.hidden = true;
+}
 @end

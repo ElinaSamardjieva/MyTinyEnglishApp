@@ -16,4 +16,13 @@
 
 @property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 
+
+//Recording audio
+
+@property (weak, nonatomic) IBOutlet UILabel *recordingProgress;
+
+- (IBAction)recordAudio:(id)sender;
+- (IBAction)stopRecordingAudio:(id)sender;
+
+
 @end

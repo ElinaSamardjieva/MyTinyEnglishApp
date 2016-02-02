@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32263681C60F528000BEF56 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32263671C60F528000BEF56 /* AVFoundation.framework */; };
 		C323D5841C5FED670012F5FF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5831C5FED670012F5FF /* Validator.swift */; };
 		C323D5861C600C9F0012F5FF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5851C600C9F0012F5FF /* Message.swift */; };
 		C340020D1C5FB96400E798E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C340020C1C5FB96400E798E1 /* Images.xcassets */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C32263671C60F528000BEF56 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C323D5831C5FED670012F5FF /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		C323D5851C600C9F0012F5FF /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C340020C1C5FB96400E798E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32263681C60F528000BEF56 /* AVFoundation.framework in Frameworks */,
 				C34002231C5FC17400E798E1 /* libsqlite3.tbd in Frameworks */,
 				C34002211C5FC16F00E798E1 /* libz.tbd in Frameworks */,
 				C340021F1C5FC16800E798E1 /* SystemConfiguration.framework in Frameworks */,
@@ -194,6 +197,7 @@
 		C3761B4F1C5F87680076762F = {
 			isa = PBXGroup;
 			children = (
+				C32263671C60F528000BEF56 /* AVFoundation.framework */,
 				C3761B5A1C5F87680076762F /* MyTinyEnglishApp */,
 				C3761B6F1C5F87680076762F /* MyTinyEnglishAppTests */,
 				C3761B7A1C5F87680076762F /* MyTinyEnglishAppUITests */,
