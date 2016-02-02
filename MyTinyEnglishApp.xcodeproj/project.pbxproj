@@ -24,6 +24,8 @@
 		C34002271C5FC1C000E798E1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002261C5FC1C000E798E1 /* Parse.framework */; };
 		C34F7C241C5FB32900E10F8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F7C231C5FB32900E10F8A /* LoginViewController.swift */; };
 		C34F7C261C5FB34700E10F8A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F7C251C5FB34700E10F8A /* RegisterViewController.swift */; };
+		C36006EB1C60B8C8001A3422 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36006EA1C60B8C8001A3422 /* MenuViewController.swift */; };
+		C36007361C60D030001A3422 /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36007351C60D030001A3422 /* AudioViewController.m */; };
 		C3761B5C1C5F87680076762F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3761B5B1C5F87680076762F /* AppDelegate.swift */; };
 		C3761B5E1C5F87680076762F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3761B5D1C5F87680076762F /* HomeViewController.swift */; };
 		C3761B611C5F87680076762F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3761B5F1C5F87680076762F /* Main.storyboard */; };
@@ -67,6 +69,10 @@
 		C34002261C5FC1C000E798E1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C34F7C231C5FB32900E10F8A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C34F7C251C5FB34700E10F8A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C36006EA1C60B8C8001A3422 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C36006EE1C60BEE7001A3422 /* MyTinyEnglishApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTinyEnglishApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		C36007341C60D030001A3422 /* AudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
+		C36007351C60D030001A3422 /* AudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
 		C3761B581C5F87680076762F /* MyTinyEnglishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTinyEnglishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3761B5B1C5F87680076762F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3761B5D1C5F87680076762F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +183,10 @@
 				C3761B5D1C5F87680076762F /* HomeViewController.swift */,
 				C34F7C231C5FB32900E10F8A /* LoginViewController.swift */,
 				C34F7C251C5FB34700E10F8A /* RegisterViewController.swift */,
+				C36006EA1C60B8C8001A3422 /* MenuViewController.swift */,
+				C36006EE1C60BEE7001A3422 /* MyTinyEnglishApp-Bridging-Header.h */,
+				C36007341C60D030001A3422 /* AudioViewController.h */,
+				C36007351C60D030001A3422 /* AudioViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -365,8 +375,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34F7C241C5FB32900E10F8A /* LoginViewController.swift in Sources */,
+				C36007361C60D030001A3422 /* AudioViewController.m in Sources */,
 				C3761B5E1C5F87680076762F /* HomeViewController.swift in Sources */,
 				C323D5841C5FED670012F5FF /* Validator.swift in Sources */,
+				C36006EB1C60B8C8001A3422 /* MenuViewController.swift in Sources */,
 				C34F7C261C5FB34700E10F8A /* RegisterViewController.swift in Sources */,
 				C323D5861C600C9F0012F5FF /* Message.swift in Sources */,
 				C3761B5C1C5F87680076762F /* AppDelegate.swift in Sources */,
@@ -511,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyTinyEnglishApp",
@@ -519,6 +532,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = None.MyTinyEnglishApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTinyEnglishApp/MyTinyEnglishApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -526,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyTinyEnglishApp",
@@ -534,6 +550,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = None.MyTinyEnglishApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTinyEnglishApp/MyTinyEnglishApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
