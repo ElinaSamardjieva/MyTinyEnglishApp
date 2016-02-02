@@ -8,8 +8,10 @@
 
 #import "AudioViewController.h"
 
-@interface AudioViewController ()
-
+@interface AudioViewController () {
+    AVAudioRecorder *recorder;
+    AVAudioPlayer *player;
+}
 @end
 
 @implementation AudioViewController
@@ -19,7 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Siri
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
+    
+    //Recording Audio
+
 
 }
 

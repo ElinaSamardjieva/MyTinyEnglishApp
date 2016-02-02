@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface AudioViewController : UIViewController
+@interface AudioViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textToSpeak;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
@@ -23,6 +23,5 @@
 
 - (IBAction)recordAudio:(id)sender;
 - (IBAction)stopRecordingAudio:(id)sender;
-
 
 @end
