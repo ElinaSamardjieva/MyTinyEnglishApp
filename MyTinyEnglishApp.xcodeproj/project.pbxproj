@@ -10,6 +10,8 @@
 		C32263681C60F528000BEF56 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32263671C60F528000BEF56 /* AVFoundation.framework */; };
 		C323D5841C5FED670012F5FF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5831C5FED670012F5FF /* Validator.swift */; };
 		C323D5861C600C9F0012F5FF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5851C600C9F0012F5FF /* Message.swift */; };
+		C32589E61C61F6F500989427 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32589E51C61F6F500989427 /* LibraryViewController.swift */; };
+		C32589E81C61F74900989427 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32589E71C61F74900989427 /* PhotoViewController.swift */; };
 		C340020D1C5FB96400E798E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C340020C1C5FB96400E798E1 /* Images.xcassets */; };
 		C34002111C5FC13700E798E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002101C5FC13700E798E1 /* AudioToolbox.framework */; };
 		C34002131C5FC13E00E798E1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002121C5FC13E00E798E1 /* CFNetwork.framework */; };
@@ -56,6 +58,8 @@
 		C32263671C60F528000BEF56 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C323D5831C5FED670012F5FF /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		C323D5851C600C9F0012F5FF /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C32589E51C61F6F500989427 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		C32589E71C61F74900989427 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C340020C1C5FB96400E798E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C34002101C5FC13700E798E1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C34002121C5FC13E00E798E1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -190,6 +194,8 @@
 				C36006EE1C60BEE7001A3422 /* MyTinyEnglishApp-Bridging-Header.h */,
 				C36007341C60D030001A3422 /* AudioViewController.h */,
 				C36007351C60D030001A3422 /* AudioViewController.m */,
+				C32589E71C61F74900989427 /* PhotoViewController.swift */,
+				C32589E51C61F6F500989427 /* LibraryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -385,7 +391,9 @@
 				C36006EB1C60B8C8001A3422 /* MenuViewController.swift in Sources */,
 				C34F7C261C5FB34700E10F8A /* RegisterViewController.swift in Sources */,
 				C323D5861C600C9F0012F5FF /* Message.swift in Sources */,
+				C32589E61C61F6F500989427 /* LibraryViewController.swift in Sources */,
 				C3761B5C1C5F87680076762F /* AppDelegate.swift in Sources */,
+				C32589E81C61F74900989427 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,25 +3,24 @@ Little app about studying English
 
 ## What is all about
 
-The concept of the app is to help the user with studying English in his own personal way and using the full potential of everything around him. 
+The concept of the app is to help the user with studying English in his own personal way and using the full potential of his surrounding.
 
 
-The user will have different options to study. The aplication will have three categories:
+Think yourself as a user. You will have different options to study. The application will have three categories:
 
 
-1. Vocalization side. It is friendly named **Recording studio** - in this part of the application the user will be able to type a word that he wants and to listen the pronounciation and getting familiar with it. The best part is that after hearing the pronounciation he will be able to record his own voice saying the word and after that listnening the recording and comparing it with the original application's pronounciation and to know what to improve.
+1. Vocalization side. It is friendly named **Recording studio** - in this part of the application you will be able to type a word that you want and to listen its correct pronounciation. The best part is that after that you will be able to record your own voice saying the word and comparing it with the app's pronounciation. That way you will be able to improve your own vocalization with time.
 
-2. Vizualization side or **Photo studio**. Here the user will be able to make pictures of the things around him - we all know the things in our homes, our jobs or favorite places. With taking pictures of well known things will help you to remember easier the new words.
+2. Vizualization side or **Photo studio**. Here you will be able to take pictures of the things around you - we all know the things in our home, our job or favorite places. Taking pictures of well known things will help you to remember easier the new words.
 
-3. Memorization side or **Laboratory** - here the user will have to explain to himself the new words. He will be able to save new words and to add his own explanations about them.
+3. Memorization side or **Library**. Think of the Library as a big dictionary where you will be able to explain yourself the new words. You will be able to save new words, add your own explanations about them or delete them.
 
 
 ## Functionality
 
-  - Recording audio
-  - Using Siri for hearing pronounciation
-  - Playing media
-  - Taking pictures
-  - Using Parse.com for making Registration and Login
-  - Adding new words and their explanation
+  - Use Parse.com for making Registration and Login
+  - Record and play audio
+  - Use Siri for listening pronounciation of wanted word
+  - Take pictures
+  - Add new words and their explanation - list them, save them in SQLite or delete them
 
