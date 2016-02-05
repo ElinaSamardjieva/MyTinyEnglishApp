@@ -62,10 +62,23 @@
 //Audio recorder
 - (IBAction)recordAudio:(id)sender {
     recordingProgress.hidden = false;
+    
+    if(!recorder.recording) {
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setActive:YES error:nil];
+        
+        [recorder record];
+    }
+    
 }
 
 - (IBAction)stopRecordingAudio:(id)sender {
     recordingProgress.hidden = true;
+    
+    [recorder stop];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setActive:NO error:nil];
+    
 }
 
 - (IBAction)playRecordingAudio:(id)sender {
