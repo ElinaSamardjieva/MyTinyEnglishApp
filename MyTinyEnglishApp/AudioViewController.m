@@ -82,5 +82,10 @@
 }
 
 - (IBAction)playRecordingAudio:(id)sender {
+    if(!recorder.recording) {
+        player = [[AVAudioPlayer alloc]initWithContentsOfURL:recorder.url error:nil];
+        [player setDelegate:self]; //TODO: Do I need this?
+        [player play];
+    }
 }
 @end
