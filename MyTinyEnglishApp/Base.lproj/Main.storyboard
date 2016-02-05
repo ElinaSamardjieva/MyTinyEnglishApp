@@ -278,15 +278,6 @@
                                             <rect key="frame" x="146" y="266" width="69" height="15"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-9F-ar6">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Play">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="165" y="306" width="30" height="30"/>
-                                        </variation>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xZ-Dy-IVQ">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <state key="normal" title="Record">
@@ -311,6 +302,18 @@
                                             <action selector="stopRecordingAudio:" destination="fC3-vs-Br2" eventType="touchUpInside" id="Tfp-ug-qum"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-9F-ar6">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="165" y="289" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="playRecordingAudio:" destination="fC3-vs-Br2" eventType="touchUpInside" id="feE-4Z-EGq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -327,9 +330,9 @@
                                         <exclude reference="suD-A5-sus"/>
                                         <exclude reference="pEU-gS-00g"/>
                                         <exclude reference="iE1-ff-y2m"/>
-                                        <exclude reference="mrA-9F-ar6"/>
                                         <exclude reference="3xZ-Dy-IVQ"/>
                                         <exclude reference="sQC-mV-4ac"/>
+                                        <exclude reference="mrA-9F-ar6"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -339,9 +342,9 @@
                                         <include reference="suD-A5-sus"/>
                                         <include reference="pEU-gS-00g"/>
                                         <include reference="iE1-ff-y2m"/>
-                                        <include reference="mrA-9F-ar6"/>
                                         <include reference="3xZ-Dy-IVQ"/>
                                         <include reference="sQC-mV-4ac"/>
+                                        <include reference="mrA-9F-ar6"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -359,8 +362,11 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="mrA-9F-ar6" id="gi8-ex-rJj"/>
                         <outlet property="playPauseButton" destination="suD-A5-sus" id="BIi-MD-uzr"/>
+                        <outlet property="recordButton" destination="3xZ-Dy-IVQ" id="dii-6R-ANI"/>
                         <outlet property="recordingProgress" destination="iE1-ff-y2m" id="RSc-Ok-S63"/>
+                        <outlet property="stopButton" destination="sQC-mV-4ac" id="tXk-RH-PDR"/>
                         <outlet property="textToSpeak" destination="pEU-gS-00g" id="3mj-xn-MGb"/>
                     </connections>
                 </viewController>
@@ -383,7 +389,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Studio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLu-SE-wia">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="151" y="102" width="99" height="21"/>

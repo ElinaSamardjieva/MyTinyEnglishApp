@@ -6,7 +6,7 @@ Little app about studying English
 The concept of the app is to help the user with studying English in his own personal way and using the full potential of his surrounding.
 
 
-Think yourself as a user. You will have different options to study. The application will have three categories:
+Think for yourself as a user. You will have different options to study. The application will have three categories:
 
 
 1. Vocalization side. It is friendly named **Recording studio** - in this part of the application you will be able to type a word that you want and to listen its correct pronounciation. The best part is that after that you will be able to record your own voice saying the word and comparing it with the app's pronounciation. That way you will be able to improve your own vocalization with time.

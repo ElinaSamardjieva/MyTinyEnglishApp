@@ -11,6 +11,7 @@
 
 @interface AudioViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
+//Siry
 @property (weak, nonatomic) IBOutlet UITextView *textToSpeak;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
 
@@ -20,8 +21,13 @@
 //Recording audio
 
 @property (weak, nonatomic) IBOutlet UILabel *recordingProgress;
+@property (weak, nonatomic) IBOutlet UIButton *recordButton;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+
 
 - (IBAction)recordAudio:(id)sender;
 - (IBAction)stopRecordingAudio:(id)sender;
+- (IBAction)playRecordingAudio:(id)sender;
 
 @end

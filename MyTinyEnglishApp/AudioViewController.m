@@ -25,28 +25,49 @@
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
     
     //Recording Audio
+    NSArray *pathComponents = [NSArray arrayWithObjects:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject], @"MyAudioMemo.m4a", nil];
+    
+    NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
+    
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    
+    NSMutableDictionary *recordSetting = [[NSMutableDictionary alloc]init];
+    
+    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
+    [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
+    [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
 
-
+    recorder = [[AVAudioRecorder alloc]initWithURL:outputFileURL settings: recordSetting error:NULL];
+    recorder.delegate = self;
+    recorder.meteringEnabled = "YES";
+    [recorder prepareToRecord];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
 }
+
+//Siri
 - (IBAction)playPauseButtonPressed:(UIButton *)sender {
     [self.textToSpeak resignFirstResponder];
     AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:self.textToSpeak.text];
-    utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
-    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-au"];
+    //utterance.rate = AVSpeechUtteranceMinimumSpeechRate; //Speak slowly
+    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"uk"];
     [self.synthesizer speakUtterance:utterance];
 }
 
-
+//Audio recorder
 - (IBAction)recordAudio:(id)sender {
     recordingProgress.hidden = false;
 }
 
 - (IBAction)stopRecordingAudio:(id)sender {
     recordingProgress.hidden = true;
+}
+
+- (IBAction)playRecordingAudio:(id)sender {
 }
 @end
