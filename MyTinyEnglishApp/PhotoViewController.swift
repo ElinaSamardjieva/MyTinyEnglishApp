@@ -8,10 +8,23 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    let picker = UIImagePickerController()
+    
+    @IBOutlet weak var myImageView: UIImageView!
 
+    @IBAction func openGallery(sender: AnyObject) {
+        picker.allowsEditing = false
+        picker.sourceType = .PhotoLibrary
+        presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        picker.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +34,21 @@ class PhotoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //DELEGATES
+    func imagePickerController(
+        picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        myImageView.contentMode = .ScaleAspectFit
+        myImageView.image = chosenImage
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
