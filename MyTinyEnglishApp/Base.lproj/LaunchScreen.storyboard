@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +18,47 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="EwQ-UJ-AkK">
+                                <rect key="frame" x="180" y="192" width="240" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Et5-lp-7HF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9NY-fJ-lIA"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="EwQ-UJ-AkK" secondAttribute="bottom" constant="193" id="AoX-x3-XuI"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Iu1-Qx-WyS"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Iyj-Db-JMZ"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="172" id="MzR-Rl-Pf2"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QCq-Lq-Fos"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="190" id="QGM-CE-Vbu"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QSY-6Z-37o"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="EwQ-UJ-AkK" secondAttribute="bottom" constant="193" id="XPy-dn-rZE"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="Xhz-kG-qct"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="160" id="awo-yS-uJm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EwQ-UJ-AkK" secondAttribute="trailing" constant="160" id="f3i-VA-432"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ixC-6c-pA1"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="tTE-Zv-88b"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="2:5" id="x7c-OH-TSu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Iu1-Qx-WyS"/>
+                                <exclude reference="Iyj-Db-JMZ"/>
+                                <exclude reference="QCq-Lq-Fos"/>
+                                <exclude reference="QGM-CE-Vbu"/>
+                                <exclude reference="Xhz-kG-qct"/>
+                                <exclude reference="awo-yS-uJm"/>
+                                <exclude reference="f3i-VA-432"/>
+                                <exclude reference="ixC-6c-pA1"/>
+                                <exclude reference="tTE-Zv-88b"/>
+                                <exclude reference="x7c-OH-TSu"/>
+                                <exclude reference="XPy-dn-rZE"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +66,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CharmyKitty" width="480" height="480"/>
+    </resources>
 </document>
