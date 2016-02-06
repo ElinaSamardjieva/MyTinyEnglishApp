@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         
         // Show the current visitor's username
         if let pUserName = PFUser.currentUser()?["username"] as? String {
-            self.usernameLabel.text = "Hello, @" + pUserName + "!"
+            self.usernameLabel.text = "Welcome, " + pUserName + "!"
         }
         
         // Do any additional setup after loading the view, typically from a nib.

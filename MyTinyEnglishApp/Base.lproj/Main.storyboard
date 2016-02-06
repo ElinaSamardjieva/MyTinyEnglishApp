@@ -22,26 +22,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kg-94-TYU">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-PU-TU9">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="108" y="37" width="145" height="133"/>
-                                        </variation>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2Q-Xf-0lR">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.011575051806289954" blue="0.024357820680628306" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="80" y="204" width="201" height="33"/>
+                                            <rect key="frame" x="80" y="176" width="201" height="33"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsF-KE-OgB">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="35"/>
                                         <state key="normal" title="Menu"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="161" y="245" width="39" height="30"/>
+                                            <rect key="frame" x="91" y="237" width="178" height="117"/>
                                         </variation>
                                         <connections>
                                             <segue destination="oEm-uX-3qg" kind="show" id="n2m-kA-kcw"/>
@@ -49,52 +44,71 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRf-xc-kJM">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.97256761030000005" blue="0.88868217810000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <state key="normal" title="Log out"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="154" y="287" width="52" height="30"/>
+                                            <rect key="frame" x="141" y="374" width="79" height="35"/>
                                         </variation>
                                         <connections>
                                             <action selector="logoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPs-et-2lK"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="180"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.82745098039999998" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="BX4-PU-TU9"/>
                                         <exclude reference="d2Q-Xf-0lR"/>
                                         <exclude reference="HsF-KE-OgB"/>
                                         <exclude reference="cRf-xc-kJM"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="25" y="184" width="360" height="360"/>
+                                    <rect key="frame" x="25" y="111" width="360" height="447"/>
                                     <mask key="subviews">
-                                        <include reference="BX4-PU-TU9"/>
                                         <include reference="d2Q-Xf-0lR"/>
                                         <include reference="HsF-KE-OgB"/>
                                         <include reference="cRf-xc-kJM"/>
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VSh-3C-g3h">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="317" y="64" width="68" height="52"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Tiny English App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJt-cr-NbB">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="72" width="284" height="60"/>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.086264725130890077" green="0.89140215968586389" blue="0.89140215968586389" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.97256761030000005" blue="0.88868217810000005" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="5kg-94-TYU"/>
+                                <exclude reference="VSh-3C-g3h"/>
+                                <exclude reference="mJt-cr-NbB"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="5kg-94-TYU"/>
+                                <include reference="VSh-3C-g3h"/>
+                                <include reference="mJt-cr-NbB"/>
                             </mask>
                         </variation>
                     </view>
@@ -124,11 +138,12 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scq-v8-R38">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.97256761030000005" blue="0.88868217810000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Recording studio">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="122" y="94" width="116" height="30"/>
+                                            <rect key="frame" x="91" y="113" width="179" height="62"/>
                                         </variation>
                                         <connections>
                                             <segue destination="fC3-vs-Br2" kind="show" id="hAy-x5-Q75"/>
@@ -136,11 +151,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ink-ZB-vLo">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.97256761030000005" blue="0.88868217810000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Photo studio">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="137" y="153" width="87" height="30"/>
+                                            <rect key="frame" x="91" y="203" width="179" height="63"/>
                                         </variation>
                                         <connections>
                                             <segue destination="7Vd-eJ-Rfd" kind="show" id="PUe-hf-sst"/>
@@ -148,7 +164,8 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHp-zR-bLu">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Library">
+                                        <color key="backgroundColor" red="1" green="0.97256761030000005" blue="0.88868217810000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Dictionary">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -160,48 +177,72 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="156" y="208" width="48" height="30"/>
+                                            <rect key="frame" x="91" y="298" width="179" height="58"/>
                                         </variation>
                                         <connections>
                                             <segue destination="wDf-2w-ABp" kind="show" id="wL0-oe-BIw"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="microphone" translatesAutoresizingMaskIntoConstraints="NO" id="ana-kx-i0C">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="58" y="82" width="64" height="62"/>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="71M-2L-qaq">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="58" y="170" width="63" height="63"/>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dictionary" translatesAutoresizingMaskIntoConstraints="NO" id="9DV-QT-NVU">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="58" y="264" width="71" height="63"/>
+                                        </variation>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="180"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <color key="backgroundColor" red="0.94554014419999999" green="0.87052048839999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="scq-v8-R38"/>
                                         <exclude reference="ink-ZB-vLo"/>
                                         <exclude reference="KHp-zR-bLu"/>
+                                        <exclude reference="ana-kx-i0C"/>
+                                        <exclude reference="71M-2L-qaq"/>
+                                        <exclude reference="9DV-QT-NVU"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="188" width="360" height="360"/>
+                                    <rect key="frame" x="20" y="126" width="360" height="422"/>
                                     <mask key="subviews">
                                         <include reference="scq-v8-R38"/>
                                         <include reference="ink-ZB-vLo"/>
                                         <include reference="KHp-zR-bLu"/>
+                                        <include reference="ana-kx-i0C"/>
+                                        <include reference="71M-2L-qaq"/>
+                                        <include reference="9DV-QT-NVU"/>
                                     </mask>
                                 </variation>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catIcon" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-gG-lmI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="287" y="64" width="93" height="71"/>
+                                </variation>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.22542303975249944" blue="0.17344352807409769" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.96470588239999999" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="kXH-Ar-0qO"/>
+                                <exclude reference="M4c-gG-lmI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="kXH-Ar-0qO"/>
+                                <include reference="M4c-gG-lmI"/>
                             </mask>
                         </variation>
                     </view>
@@ -243,20 +284,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdS-Dd-eaK">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Recording Studio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJl-zz-TWP">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="97" y="45" width="166" height="21"/>
-                                        </variation>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suD-A5-sus">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Siri"/>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
+                                        <state key="normal" title="Ask Siri"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="165" y="165" width="30" height="30"/>
+                                            <rect key="frame" x="108" y="159" width="144" height="57"/>
                                         </variation>
                                         <connections>
                                             <action selector="playPauseButtonPressed:" destination="fC3-vs-Br2" eventType="touchUpInside" id="7gk-in-nuz"/>
@@ -306,11 +339,12 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-9F-ar6">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
                                         <state key="normal" title="Play">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="165" y="289" width="30" height="30"/>
+                                            <rect key="frame" x="125" y="283" width="90" height="77"/>
                                         </variation>
                                         <connections>
                                             <action selector="playRecordingAudio:" destination="fC3-vs-Br2" eventType="touchUpInside" id="feE-4Z-EGq"/>
@@ -318,17 +352,8 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="180"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="HJl-zz-TWP"/>
                                         <exclude reference="suD-A5-sus"/>
                                         <exclude reference="pEU-gS-00g"/>
                                         <exclude reference="iE1-ff-y2m"/>
@@ -340,7 +365,6 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="170" width="360" height="360"/>
                                     <mask key="subviews">
-                                        <include reference="HJl-zz-TWP"/>
                                         <include reference="suD-A5-sus"/>
                                         <include reference="pEU-gS-00g"/>
                                         <include reference="iE1-ff-y2m"/>
@@ -350,16 +374,27 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Recording Studio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJl-zz-TWP">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="117" y="95" width="166" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.33375704630000003" green="1" blue="0.80785517159999998" alpha="0.69733488480000005" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="BdS-Dd-eaK"/>
+                                <exclude reference="HJl-zz-TWP"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="BdS-Dd-eaK"/>
+                                <include reference="HJl-zz-TWP"/>
                             </mask>
                         </variation>
                     </view>
@@ -374,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFj-QY-TNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801.5" y="1199"/>
+            <point key="canvasLocation" x="1794" y="1343"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="DnV-Di-cih">
@@ -390,9 +425,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-k5-xYn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="27" y="111" width="365" height="392"/>
-                                </variation>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mow-pq-EHx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -461,16 +493,16 @@
                                 <exclude reference="Ici-Mo-fLo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="SKN-wB-c7G"/>
-                                <exclude reference="a4X-FI-mnw"/>
-                                <exclude reference="niY-VU-4nw"/>
+                                <exclude reference="APd-gT-0yU"/>
+                                <exclude reference="ubU-A9-3Bm"/>
+                                <exclude reference="vsk-Pf-Bq6"/>
                                 <exclude reference="S5z-6s-NSg"/>
                                 <exclude reference="TOW-pp-PdX"/>
                                 <exclude reference="hLG-xT-1KH"/>
                                 <exclude reference="wNP-EP-ukP"/>
-                                <exclude reference="APd-gT-0yU"/>
-                                <exclude reference="ubU-A9-3Bm"/>
-                                <exclude reference="vsk-Pf-Bq6"/>
+                                <exclude reference="SKN-wB-c7G"/>
+                                <exclude reference="a4X-FI-mnw"/>
+                                <exclude reference="niY-VU-4nw"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -480,16 +512,16 @@
                                 <include reference="Ici-Mo-fLo"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="SKN-wB-c7G"/>
-                                <include reference="a4X-FI-mnw"/>
-                                <include reference="niY-VU-4nw"/>
+                                <exclude reference="APd-gT-0yU"/>
+                                <exclude reference="ubU-A9-3Bm"/>
+                                <include reference="vsk-Pf-Bq6"/>
                                 <include reference="S5z-6s-NSg"/>
                                 <include reference="TOW-pp-PdX"/>
                                 <exclude reference="hLG-xT-1KH"/>
                                 <include reference="wNP-EP-ukP"/>
-                                <exclude reference="APd-gT-0yU"/>
-                                <exclude reference="ubU-A9-3Bm"/>
-                                <include reference="vsk-Pf-Bq6"/>
+                                <include reference="SKN-wB-c7G"/>
+                                <include reference="a4X-FI-mnw"/>
+                                <include reference="niY-VU-4nw"/>
                             </mask>
                         </variation>
                     </view>
@@ -745,5 +777,10 @@
     <resources>
         <image name="CharmyKitty" width="480" height="480"/>
         <image name="Logo" width="319" height="87"/>
+        <image name="camera" width="512" height="512"/>
+        <image name="catIcon" width="285" height="210"/>
+        <image name="dictionary" width="512" height="512"/>
+        <image name="microphone" width="512" height="512"/>
     </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>
