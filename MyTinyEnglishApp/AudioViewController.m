@@ -16,7 +16,7 @@
 
 @implementation AudioViewController
 
-@synthesize recordingProgress, yourLabel;
+@synthesize recordingProgress, yourLabel, charmyKitty;
 BOOL blinkStatus = NO;
 NSTimer *timer;
 
@@ -44,6 +44,19 @@ NSTimer *timer;
     recorder.delegate = self;
     recorder.meteringEnabled = "YES";
     [recorder prepareToRecord];
+    
+    
+    //Kitty
+   // [charmyKitty setFrame:CGRectMake(100, 100, charmyKitty.frame.size.width, charmyKitty.frame.size.height)];
+    
+    [UIView animateWithDuration:1.0
+                          delay:0.5
+                        options: UIViewAnimationCurveEaseOut
+                     animations:^{
+                         [charmyKitty setFrame:CGRectMake(-100, 0, charmyKitty.frame.size.width, charmyKitty.frame.size.height)];
+                     }
+                     completion:^(BOOL finished){
+                     }];
 }
 
 - (void)didReceiveMemoryWarning {

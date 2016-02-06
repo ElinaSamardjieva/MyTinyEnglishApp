@@ -564,6 +564,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="charmyKitty" destination="Ey5-f6-Fam" id="xU4-fD-aku"/>
                         <outlet property="playButton" destination="mrA-9F-ar6" id="gi8-ex-rJj"/>
                         <outlet property="playPauseButton" destination="suD-A5-sus" id="BIi-MD-uzr"/>
                         <outlet property="recordButton" destination="3xZ-Dy-IVQ" id="dii-6R-ANI"/>

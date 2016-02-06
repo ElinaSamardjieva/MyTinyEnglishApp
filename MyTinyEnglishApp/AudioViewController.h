@@ -11,6 +11,8 @@
 
 @interface AudioViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *charmyKitty;
+
 //Siri
 @property (weak, nonatomic) IBOutlet UITextView *textToSpeak;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
