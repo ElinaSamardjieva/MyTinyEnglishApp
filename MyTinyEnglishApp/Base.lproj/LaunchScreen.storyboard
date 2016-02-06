@@ -19,20 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="EwQ-UJ-AkK">
-                                <rect key="frame" x="180" y="192" width="240" height="215"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Et5-lp-7HF"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="EwQ-UJ-AkK">
+                                <rect key="frame" x="60" y="60" width="480" height="480"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9NY-fJ-lIA"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="EwQ-UJ-AkK" secondAttribute="bottom" constant="193" id="AoX-x3-XuI"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Iu1-Qx-WyS"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Iyj-Db-JMZ"/>
-                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="172" id="MzR-Rl-Pf2"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QCq-Lq-Fos"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="190" id="QGM-CE-Vbu"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QSY-6Z-37o"/>

@@ -48,6 +48,11 @@ class LoginViewController: UIViewController {
                 let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
                 alert.show()
                 
+          //      let alert = UIAlertController(title:"Success", message:"Logged In", preferredStyle: .Alert)
+          //      let alertAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+          //      alert.addAction(alertAction)
+          //      self.presentViewController(alert, animated: true, completion: nil)
+                
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                    
                     let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -57,20 +62,11 @@ class LoginViewController: UIViewController {
                 })
                 
             } else {
-                let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
-                alert.show()
+                      let alert = UIAlertController(title:"Error", message:"Invalid username or password, please try again", preferredStyle: .Alert)
+                      let alertAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                      alert.addAction(alertAction)
+                      self.presentViewController(alert, animated: true, completion: nil)
             }
         })
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

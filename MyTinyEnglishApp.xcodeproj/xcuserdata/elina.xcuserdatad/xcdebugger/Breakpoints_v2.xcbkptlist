@@ -58,11 +58,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyTinyEnglishApp/LoginViewController.swift"
-            timestampString = "476473589.43067"
+            timestampString = "476494830.383566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "loginAction(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTinyEnglishApp.LoginViewController.(loginAction (MyTinyEnglishApp.LoginViewController) -&gt; (Swift.AnyObject) -&gt; ()).(closure #1)"
+                  moduleName = "MyTinyEnglishApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Desktop/MyTinyEnglishApp/MyTinyEnglishApp/LoginViewController.swift"
+                  timestampString = "476493704.077798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1046">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTinyEnglishApp.LoginViewController.(loginAction (MyTinyEnglishApp.LoginViewController) -&gt; (Swift.AnyObject) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "MyTinyEnglishApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elina/Desktop/MyTinyEnglishApp/MyTinyEnglishApp/LoginViewController.swift"
+                  timestampString = "476493704.078007"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyTinyEnglishApp/LoginViewController.swift"
+            timestampString = "476494830.383566"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "loginAction(_:)"
             landmarkType = "5">
          </BreakpointContent>
