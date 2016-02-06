@@ -8,10 +8,12 @@
 
 import UIKit
 import Parse
+import QuartzCore
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var usernameLabel: UILabel!
+    
     
     override func viewWillAppear(animated: Bool) {
         if (PFUser.currentUser() == nil) {
@@ -30,6 +32,8 @@ class HomeViewController: UIViewController {
         if let pUserName = PFUser.currentUser()?["username"] as? String {
             self.usernameLabel.text = "Welcome, " + pUserName + "!"
         }
+        
+        self.usernameLabel.layer.borderColor = UIColor.grayColor().CGColor
         
         // Do any additional setup after loading the view, typically from a nib.
     }
