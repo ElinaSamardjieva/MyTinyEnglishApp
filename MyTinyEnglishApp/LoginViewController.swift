@@ -49,8 +49,11 @@ class LoginViewController: UIViewController {
                 alert.show()
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") as! UIViewController
-                    self.presentViewController(viewController, animated: true, completion: nil)
+                   
+                    let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let viewController : HomeViewController = storyboard.instantiateViewControllerWithIdentifier("Home") as! HomeViewController
+                    let navigationController = UINavigationController(rootViewController: viewController)
+                    self.presentViewController(navigationController, animated: true, completion: nil)
                 })
                 
             } else {
