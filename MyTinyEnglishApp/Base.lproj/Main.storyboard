@@ -491,6 +491,25 @@
                                             <rect key="frame" x="81" y="18" width="219" height="21"/>
                                         </variation>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKh-Ya-yyb">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="163" y="366" width="34" height="34"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <variation key="default">
@@ -504,6 +523,7 @@
                                         <exclude reference="zMF-3F-bKf"/>
                                         <exclude reference="iE1-ff-y2m"/>
                                         <exclude reference="Bij-g4-JWw"/>
+                                        <exclude reference="sKh-Ya-yyb"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -523,6 +543,7 @@
                                     <rect key="frame" x="20" y="170" width="360" height="533"/>
                                     <mask key="subviews">
                                         <include reference="zMF-3F-bKf"/>
+                                        <include reference="sKh-Ya-yyb"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -548,6 +569,7 @@
                         <outlet property="recordingProgress" destination="iE1-ff-y2m" id="RSc-Ok-S63"/>
                         <outlet property="stopButton" destination="sQC-mV-4ac" id="tXk-RH-PDR"/>
                         <outlet property="textToSpeak" destination="pEU-gS-00g" id="3mj-xn-MGb"/>
+                        <outlet property="yourLabel" destination="sKh-Ya-yyb" id="2fX-zl-rng"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFj-QY-TNb" userLabel="First Responder" sceneMemberID="firstResponder"/>

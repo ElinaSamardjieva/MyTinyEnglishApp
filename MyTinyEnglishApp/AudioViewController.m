@@ -16,7 +16,9 @@
 
 @implementation AudioViewController
 
-@synthesize recordingProgress;
+@synthesize recordingProgress, yourLabel;
+BOOL blinkStatus = NO;
+NSTimer *timer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,7 +44,6 @@
     recorder.delegate = self;
     recorder.meteringEnabled = "YES";
     [recorder prepareToRecord];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +63,15 @@
 //Audio recorder
 - (IBAction)recordAudio:(id)sender {
     recordingProgress.hidden = false;
+  
+    //Blinking
+    timer = [NSTimer
+                      scheduledTimerWithTimeInterval:(NSTimeInterval)(1.0)
+                      target:self
+                      selector:@selector(blink)
+                      userInfo:nil
+                      repeats:TRUE];
+    
     
     if(!recorder.recording) {
         AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -74,6 +84,8 @@
 
 - (IBAction)stopRecordingAudio:(id)sender {
     recordingProgress.hidden = true;
+    [timer invalidate];
+    yourLabel.backgroundColor = [UIColor whiteColor];
     
     [recorder stop];
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -88,4 +100,15 @@
         [player play];
     }
 }
+
+-(void)blink{
+    if(blinkStatus == NO){
+        yourLabel.backgroundColor = [UIColor whiteColor];
+        blinkStatus = YES;
+    }else {
+        yourLabel.backgroundColor = [UIColor redColor];
+        blinkStatus = NO;
+    }
+}
+
 @end
