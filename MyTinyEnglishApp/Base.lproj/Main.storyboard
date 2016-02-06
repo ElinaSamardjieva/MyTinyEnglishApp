@@ -390,15 +390,15 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-k5-xYn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="4" y="144" width="392" height="356"/>
+                                </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Studio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-zG-ePx">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mow-pq-EHx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="QEG-Mu-WTg"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Gallery" id="7j9-oT-Cik">
                                         <connections>
@@ -418,64 +418,69 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="4" y="548" width="400" height="44"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QEG-Mu-WTg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="QEG-Mu-WTg"/>
+                                    </mask>
                                 </variation>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-Mo-fLo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-Mo-fLo">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="100" width="97" height="30"/>
+                                    <rect key="frame" x="108" y="106" width="185" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.33375704630000003" green="1" blue="0.80785517159999998" alpha="0.69733488480000005" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="lsb-zG-ePx" firstAttribute="leading" secondItem="AdN-Im-1ki" secondAttribute="leadingMargin" id="54C-gs-1ar"/>
-                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="lsb-zG-ePx" secondAttribute="bottom" constant="508" id="70b-8D-NXA"/>
+                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="mow-pq-EHx" secondAttribute="bottom" constant="8" id="APd-gT-0yU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KNx-k5-xYn" secondAttribute="trailing" constant="-16" id="SKN-wB-c7G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mow-pq-EHx" secondAttribute="trailing" constant="-24" id="TOW-pp-PdX"/>
                             <constraint firstItem="KNx-k5-xYn" firstAttribute="leading" secondItem="AdN-Im-1ki" secondAttribute="leadingMargin" constant="-16" id="a4X-FI-mnw"/>
+                            <constraint firstItem="mow-pq-EHx" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" constant="48" id="hLG-xT-1KH"/>
                             <constraint firstItem="KNx-k5-xYn" firstAttribute="top" secondItem="pHi-g7-BJd" secondAttribute="bottom" id="niY-VU-4nw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lsb-zG-ePx" secondAttribute="trailing" id="qgQ-6A-J2d"/>
-                            <constraint firstItem="lsb-zG-ePx" firstAttribute="top" secondItem="pHi-g7-BJd" secondAttribute="bottom" constant="8" id="uLz-Cu-vpN"/>
                             <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" id="ubU-A9-3Bm"/>
+                            <constraint firstItem="mow-pq-EHx" firstAttribute="leading" secondItem="KNx-k5-xYn" secondAttribute="leading" id="wNP-EP-ukP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="KNx-k5-xYn"/>
-                                <exclude reference="lsb-zG-ePx"/>
                                 <exclude reference="mow-pq-EHx"/>
                                 <exclude reference="Ici-Mo-fLo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="70b-8D-NXA"/>
-                                <exclude reference="ubU-A9-3Bm"/>
-                                <exclude reference="54C-gs-1ar"/>
-                                <exclude reference="qgQ-6A-J2d"/>
-                                <exclude reference="uLz-Cu-vpN"/>
                                 <exclude reference="SKN-wB-c7G"/>
                                 <exclude reference="a4X-FI-mnw"/>
                                 <exclude reference="niY-VU-4nw"/>
+                                <exclude reference="TOW-pp-PdX"/>
+                                <exclude reference="hLG-xT-1KH"/>
+                                <exclude reference="wNP-EP-ukP"/>
+                                <exclude reference="APd-gT-0yU"/>
+                                <exclude reference="ubU-A9-3Bm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="KNx-k5-xYn"/>
-                                <include reference="lsb-zG-ePx"/>
                                 <include reference="mow-pq-EHx"/>
                                 <include reference="Ici-Mo-fLo"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="70b-8D-NXA"/>
-                                <include reference="ubU-A9-3Bm"/>
-                                <include reference="54C-gs-1ar"/>
-                                <include reference="qgQ-6A-J2d"/>
-                                <include reference="uLz-Cu-vpN"/>
                                 <include reference="SKN-wB-c7G"/>
                                 <include reference="a4X-FI-mnw"/>
                                 <include reference="niY-VU-4nw"/>
+                                <include reference="TOW-pp-PdX"/>
+                                <include reference="hLG-xT-1KH"/>
+                                <include reference="wNP-EP-ukP"/>
+                                <include reference="APd-gT-0yU"/>
+                                <include reference="ubU-A9-3Bm"/>
                             </mask>
                         </variation>
                     </view>

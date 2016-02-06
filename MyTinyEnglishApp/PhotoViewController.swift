@@ -22,13 +22,10 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         picker.delegate = self
         wordInput.delegate = self
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func savePhotoWithText(sender: AnyObject) {
         var userInput = wordInput.text
-        //     var newImage = textToImage(userInput!, inImage: UIImage(named:"CharmyKitty")!, atPoint: CGPointMake(20, 20))
         var newImage = textToImage(userInput!, inImage: chosenImage, atPoint: CGPointMake(20, 20))
         myImageView.image = newImage
         
@@ -36,7 +33,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
 
     @IBAction func openGallery(sender: AnyObject) {
-        picker.allowsEditing = false
         picker.sourceType = .PhotoLibrary
         presentViewController(picker, animated: true, completion: nil)
     }
@@ -54,13 +50,10 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //DELEGATES
-    func imagePickerController(
-        picker: UIImagePickerController,
-        didFinishPickingMediaWithInfo info: [String : AnyObject])
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         myImageView.contentMode = .ScaleAspectFit
@@ -73,24 +66,9 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func noCamera(){
-        let alertVC = UIAlertController(
-            title: "No Camera",
-            message: "Sorry, this device has no camera",
-            preferredStyle: .Alert)
-        let okAction = UIAlertAction(
-            title: "OK",
-            style:.Default,
-            handler: nil)
-        alertVC.addAction(okAction)
-        presentViewController(alertVC,
-            animated: true,
-            completion: nil)
-    }
     
     func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint)->UIImage{
         
-        // Setup the font specific variables
         var textColor: UIColor = UIColor.yellowColor()
         var textFont: UIFont = UIFont(name: "Helvetica Bold", size: 200)!
         
@@ -123,19 +101,25 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
     }
     
+    func noCamera(){
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .Alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.Default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        presentViewController(alertVC,
+            animated: true,
+            completion: nil)
+    }
+    
+    //Disable keyboard
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
