@@ -12,6 +12,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     let picker = UIImagePickerController()
     
+    @IBOutlet weak var charmyKitty: UIImageView!
     
     @IBOutlet weak var userTextInput: UITextField!
 
@@ -25,6 +26,12 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         picker.delegate = self
         userTextInput.delegate = self
+        
+        UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.charmyKitty.alpha = 1
+            
+            self.charmyKitty.center.x = 1
+            }, completion: nil)
     }
     
     @IBAction func savePhoto(sender: AnyObject) {
