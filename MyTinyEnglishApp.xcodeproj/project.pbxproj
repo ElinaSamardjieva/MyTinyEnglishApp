@@ -10,7 +10,7 @@
 		C32263681C60F528000BEF56 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32263671C60F528000BEF56 /* AVFoundation.framework */; };
 		C323D5841C5FED670012F5FF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5831C5FED670012F5FF /* Validator.swift */; };
 		C323D5861C600C9F0012F5FF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5851C600C9F0012F5FF /* Message.swift */; };
-		C32589E61C61F6F500989427 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32589E51C61F6F500989427 /* LibraryViewController.swift */; };
+		C32589E61C61F6F500989427 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32589E51C61F6F500989427 /* DictionaryViewController.swift */; };
 		C32589E81C61F74900989427 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32589E71C61F74900989427 /* PhotoViewController.swift */; };
 		C32A44E91C66050900BF27A7 /* libLexicontext.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32A44E81C66050900BF27A7 /* libLexicontext.a */; };
 		C32A44EB1C66052800BF27A7 /* LexicontextAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C32A44EA1C66052800BF27A7 /* LexicontextAssets.bundle */; };
@@ -60,7 +60,7 @@
 		C32263671C60F528000BEF56 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C323D5831C5FED670012F5FF /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		C323D5851C600C9F0012F5FF /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		C32589E51C61F6F500989427 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		C32589E51C61F6F500989427 /* DictionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		C32589E71C61F74900989427 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		C32A44E71C6604F900BF27A7 /* Lexicontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lexicontext.h; sourceTree = "<group>"; };
 		C32A44E81C66050900BF27A7 /* libLexicontext.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLexicontext.a; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 				C36007341C60D030001A3422 /* AudioViewController.h */,
 				C36007351C60D030001A3422 /* AudioViewController.m */,
 				C32589E71C61F74900989427 /* PhotoViewController.swift */,
-				C32589E51C61F6F500989427 /* LibraryViewController.swift */,
+				C32589E51C61F6F500989427 /* DictionaryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -401,7 +401,7 @@
 				C36006EB1C60B8C8001A3422 /* MenuViewController.swift in Sources */,
 				C34F7C261C5FB34700E10F8A /* RegisterViewController.swift in Sources */,
 				C323D5861C600C9F0012F5FF /* Message.swift in Sources */,
-				C32589E61C61F6F500989427 /* LibraryViewController.swift in Sources */,
+				C32589E61C61F6F500989427 /* DictionaryViewController.swift in Sources */,
 				C3761B5C1C5F87680076762F /* AppDelegate.swift in Sources */,
 				C32589E81C61F74900989427 /* PhotoViewController.swift in Sources */,
 			);

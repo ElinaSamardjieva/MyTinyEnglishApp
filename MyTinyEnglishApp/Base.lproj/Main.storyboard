@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="1801.5" y="473"/>
         </scene>
-        <!--Library View Controller-->
+        <!--Dictionary View Controller-->
         <scene sceneID="znt-Ud-Myv">
             <objects>
-                <viewController id="wDf-2w-ABp" customClass="LibraryViewController" customModule="MyTinyEnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wDf-2w-ABp" customClass="DictionaryViewController" customModule="MyTinyEnglishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Au-qu-DMo"/>
                         <viewControllerLayoutGuide type="bottom" id="Phz-KA-5W6"/>
@@ -260,47 +260,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-jx-liT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a word to search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-jx-liT">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="257" width="97" height="30"/>
+                                    <rect key="frame" x="113" y="262" width="200" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyI-8F-16K">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="315" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c96-3p-xl5">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The definition is..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vJe-hU-peN">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="95" y="93" width="240" height="128"/>
+                                    <rect key="frame" x="93" y="72" width="240" height="128"/>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsA-lq-fBB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="189" y="319" width="48" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="searchWordInDictionary:" destination="wDf-2w-ABp" eventType="touchUpInside" id="ERR-Xd-0C1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.33375704625109415" green="1" blue="0.80785517160778897" alpha="0.69733488475177308" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="bcq-jx-liT"/>
-                                <exclude reference="MyI-8F-16K"/>
-                                <exclude reference="c96-3p-xl5"/>
+                                <exclude reference="vJe-hU-peN"/>
+                                <exclude reference="NsA-lq-fBB"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="bcq-jx-liT"/>
-                                <include reference="MyI-8F-16K"/>
-                                <include reference="c96-3p-xl5"/>
+                                <include reference="vJe-hU-peN"/>
+                                <include reference="NsA-lq-fBB"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="vJe-hU-peN" id="Tb0-F4-zJC"/>
+                        <outlet property="textInput" destination="bcq-jx-liT" id="Myn-67-Ih4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jr-Cj-Mik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
