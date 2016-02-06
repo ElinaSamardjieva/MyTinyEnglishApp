@@ -22,7 +22,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         picker.delegate = self
         wordInput.delegate = self
-        
     }
     
     @IBAction func savePhotoWithText(sender: AnyObject) {

@@ -12,6 +12,8 @@
 		C323D5861C600C9F0012F5FF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323D5851C600C9F0012F5FF /* Message.swift */; };
 		C32589E61C61F6F500989427 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32589E51C61F6F500989427 /* LibraryViewController.swift */; };
 		C32589E81C61F74900989427 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32589E71C61F74900989427 /* PhotoViewController.swift */; };
+		C32A44E91C66050900BF27A7 /* libLexicontext.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C32A44E81C66050900BF27A7 /* libLexicontext.a */; };
+		C32A44EB1C66052800BF27A7 /* LexicontextAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C32A44EA1C66052800BF27A7 /* LexicontextAssets.bundle */; };
 		C340020D1C5FB96400E798E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C340020C1C5FB96400E798E1 /* Images.xcassets */; };
 		C34002111C5FC13700E798E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002101C5FC13700E798E1 /* AudioToolbox.framework */; };
 		C34002131C5FC13E00E798E1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34002121C5FC13E00E798E1 /* CFNetwork.framework */; };
@@ -60,6 +62,9 @@
 		C323D5851C600C9F0012F5FF /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C32589E51C61F6F500989427 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		C32589E71C61F74900989427 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		C32A44E71C6604F900BF27A7 /* Lexicontext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lexicontext.h; sourceTree = "<group>"; };
+		C32A44E81C66050900BF27A7 /* libLexicontext.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLexicontext.a; sourceTree = "<group>"; };
+		C32A44EA1C66052800BF27A7 /* LexicontextAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LexicontextAssets.bundle; sourceTree = "<group>"; };
 		C340020C1C5FB96400E798E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C34002101C5FC13700E798E1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C34002121C5FC13E00E798E1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -111,6 +116,7 @@
 				C34002131C5FC13E00E798E1 /* CFNetwork.framework in Frameworks */,
 				C34002271C5FC1C000E798E1 /* Parse.framework in Frameworks */,
 				C34002111C5FC13700E798E1 /* AudioToolbox.framework in Frameworks */,
+				C32A44E91C66050900BF27A7 /* libLexicontext.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,10 @@
 		C340020F1C5FC0AB00E798E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C32A44EA1C66052800BF27A7 /* LexicontextAssets.bundle */,
+				C32A44E81C66050900BF27A7 /* libLexicontext.a */,
+				C32A44E71C6604F900BF27A7 /* Lexicontext.h */,
+				C32263671C60F528000BEF56 /* AVFoundation.framework */,
 				C34002201C5FC16F00E798E1 /* libz.tbd */,
 				C34002221C5FC17400E798E1 /* libsqlite3.tbd */,
 				C340021E1C5FC16800E798E1 /* SystemConfiguration.framework */,
@@ -203,7 +213,6 @@
 		C3761B4F1C5F87680076762F = {
 			isa = PBXGroup;
 			children = (
-				C32263671C60F528000BEF56 /* AVFoundation.framework */,
 				C3761B5A1C5F87680076762F /* MyTinyEnglishApp */,
 				C3761B6F1C5F87680076762F /* MyTinyEnglishAppTests */,
 				C3761B7A1C5F87680076762F /* MyTinyEnglishAppUITests */,
@@ -359,6 +368,7 @@
 			files = (
 				C340020D1C5FB96400E798E1 /* Images.xcassets in Resources */,
 				C3761B661C5F87680076762F /* LaunchScreen.storyboard in Resources */,
+				C32A44EB1C66052800BF27A7 /* LexicontextAssets.bundle in Resources */,
 				C3761B611C5F87680076762F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +552,10 @@
 				);
 				INFOPLIST_FILE = MyTinyEnglishApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyTinyEnglishApp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = None.MyTinyEnglishApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyTinyEnglishApp/MyTinyEnglishApp-Bridging-Header.h";
@@ -560,6 +574,10 @@
 				);
 				INFOPLIST_FILE = MyTinyEnglishApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyTinyEnglishApp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = None.MyTinyEnglishApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyTinyEnglishApp/MyTinyEnglishApp-Bridging-Header.h";

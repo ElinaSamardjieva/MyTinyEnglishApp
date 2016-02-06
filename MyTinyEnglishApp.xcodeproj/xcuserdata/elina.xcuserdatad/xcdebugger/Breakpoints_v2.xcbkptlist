@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyTinyEnglishApp/RegisterViewController.swift"
-            timestampString = "476057391.31941"
+            timestampString = "476420933.819442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyTinyEnglishApp/PhotoViewController.swift"
-            timestampString = "476415243.542808"
+            timestampString = "476422975.127185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "savePhotoWithText(_:)"
             landmarkType = "5">
          </BreakpointContent>
