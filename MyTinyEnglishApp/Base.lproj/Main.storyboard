@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -253,12 +251,22 @@
                                     <rect key="frame" x="287" y="64" width="93" height="71"/>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose where you want to go..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtf-Jz-YZU">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="72" width="241" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97256761030000005" blue="0.88868217810000005" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="kXH-Ar-0qO"/>
                                 <exclude reference="M4c-gG-lmI"/>
+                                <exclude reference="gtf-Jz-YZU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -267,11 +275,16 @@
                                 <include reference="M4c-gG-lmI"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gtf-Jz-YZU"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX5-yO-H8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801.5" y="473"/>
+            <point key="canvasLocation" x="1801.5" y="472.5"/>
         </scene>
         <!--Dictionary View Controller-->
         <scene sceneID="znt-Ud-Myv">
@@ -350,25 +363,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Recording Studio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJl-zz-TWP">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="117" y="95" width="166" height="21"/>
+                                </variation>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdS-Dd-eaK">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE1-ff-y2m">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="136" y="307" width="69" height="15"/>
-                                        </variation>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xZ-Dy-IVQ">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <state key="normal" title="Record">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="33" y="240" width="49" height="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="33" y="342" width="49" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="recordAudio:" destination="fC3-vs-Br2" eventType="touchUpInside" id="MlJ-F5-hmJ"/>
@@ -376,11 +393,15 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQC-mV-4ac">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <state key="normal" title="Stop">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="299" y="240" width="32" height="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="293" y="342" width="32" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="stopRecordingAudio:" destination="fC3-vs-Br2" eventType="touchUpInside" id="Tfp-ug-qum"/>
@@ -388,12 +409,16 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrA-9F-ar6">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
                                         <state key="normal" title="Play">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="125" y="330" width="90" height="77"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="135" y="443" width="90" height="77"/>
                                         </variation>
                                         <connections>
                                             <action selector="playRecordingAudio:" destination="fC3-vs-Br2" eventType="touchUpInside" id="feE-4Z-EGq"/>
@@ -403,6 +428,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="132" y="22" width="96" height="77"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="142" y="47" width="96" height="77"/>
                                         </variation>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pEU-gS-00g">
@@ -415,76 +443,101 @@
                                             <rect key="frame" x="81" y="118" width="219" height="50"/>
                                         </variation>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suD-A5-sus">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="19"/>
+                                        <state key="normal" title="Ask Me"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="108" y="171" width="144" height="63"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="118" y="185" width="144" height="63"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="playPauseButtonPressed:" destination="fC3-vs-Br2" eventType="touchUpInside" id="7gk-in-nuz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record to hear your own words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-3F-bKf">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="81" y="279" width="219" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE1-ff-y2m">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="136" y="307" width="69" height="15"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="156" y="408" width="69" height="15"/>
+                                        </variation>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type what you want to hear..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bij-g4-JWw">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="81" y="91" width="219" height="21"/>
                                         </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suD-A5-sus">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
-                                        <state key="normal" title="Ask Me"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="108" y="171" width="144" height="63"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="81" y="18" width="219" height="21"/>
                                         </variation>
-                                        <connections>
-                                            <action selector="playPauseButtonPressed:" destination="fC3-vs-Br2" eventType="touchUpInside" id="7gk-in-nuz"/>
-                                        </connections>
-                                    </button>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="iE1-ff-y2m"/>
                                         <exclude reference="3xZ-Dy-IVQ"/>
                                         <exclude reference="sQC-mV-4ac"/>
                                         <exclude reference="mrA-9F-ar6"/>
                                         <exclude reference="Ey5-f6-Fam"/>
                                         <exclude reference="pEU-gS-00g"/>
-                                        <exclude reference="Bij-g4-JWw"/>
                                         <exclude reference="suD-A5-sus"/>
+                                        <exclude reference="zMF-3F-bKf"/>
+                                        <exclude reference="iE1-ff-y2m"/>
+                                        <exclude reference="Bij-g4-JWw"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="170" width="360" height="415"/>
                                     <mask key="subviews">
-                                        <include reference="iE1-ff-y2m"/>
                                         <include reference="3xZ-Dy-IVQ"/>
                                         <include reference="sQC-mV-4ac"/>
                                         <include reference="mrA-9F-ar6"/>
                                         <include reference="Ey5-f6-Fam"/>
                                         <include reference="pEU-gS-00g"/>
-                                        <include reference="Bij-g4-JWw"/>
                                         <include reference="suD-A5-sus"/>
+                                        <include reference="iE1-ff-y2m"/>
+                                        <include reference="Bij-g4-JWw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="170" width="360" height="533"/>
+                                    <mask key="subviews">
+                                        <include reference="zMF-3F-bKf"/>
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Recording Studio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJl-zz-TWP">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="95" width="166" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.41520598069999998" green="0.6890563609" blue="0.77767097510000005" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="BdS-Dd-eaK"/>
                                 <exclude reference="HJl-zz-TWP"/>
+                                <exclude reference="BdS-Dd-eaK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="BdS-Dd-eaK"/>
                                 <include reference="HJl-zz-TWP"/>
+                                <include reference="BdS-Dd-eaK"/>
                             </mask>
                         </variation>
                     </view>
@@ -499,7 +552,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFj-QY-TNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="1343"/>
+            <point key="canvasLocation" x="1794" y="1342.5"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="DnV-Di-cih">
@@ -513,132 +566,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-k5-xYn">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mow-pq-EHx">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYE-qO-0E3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="QEG-Mu-WTg"/>
-                                    <constraint firstAttribute="height" constant="44" id="YA9-id-Yeo"/>
-                                </constraints>
                                 <items>
-                                    <barButtonItem title="Gallery" id="7j9-oT-Cik">
+                                    <barButtonItem title="Gallery" id="it5-aA-R59">
                                         <connections>
-                                            <action selector="openGallery:" destination="7Vd-eJ-Rfd" id="mLH-jp-HiV"/>
+                                            <action selector="openGallery:" destination="7Vd-eJ-Rfd" id="nW4-GM-9i4"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xi6-p7-fST"/>
-                                    <barButtonItem title="Make Photo" id="dWD-tf-xJR">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Eys-DF-WqU"/>
+                                    <barButtonItem title="Take photo" id="qnd-DY-Gc1">
                                         <connections>
-                                            <action selector="takePhoto:" destination="7Vd-eJ-Rfd" id="tOk-TV-0Vm"/>
+                                            <action selector="takePhoto:" destination="7Vd-eJ-Rfd" id="DY8-N5-RBy"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cd2-iD-Ocx"/>
-                                    <barButtonItem title="Save Photo" id="78W-At-Szp">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="t4m-i2-fXX"/>
+                                    <barButtonItem title="Save photo" id="bh7-sl-aY9">
                                         <connections>
-                                            <action selector="savePhotoWithText:" destination="7Vd-eJ-Rfd" id="76h-xk-Tg8"/>
+                                            <action selector="savePhoto:" destination="7Vd-eJ-Rfd" id="52z-Lv-tMP"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="QEG-Mu-WTg"/>
-                                        <exclude reference="YA9-id-Yeo"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="QEG-Mu-WTg"/>
-                                        <include reference="YA9-id-Yeo"/>
-                                    </mask>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="658" width="400" height="44"/>
                                 </variation>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-Mo-fLo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsc-eK-dBM">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="79" width="185" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="96" y="585" width="219" height="30"/>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="step" translatesAutoresizingMaskIntoConstraints="NO" id="Eek-xb-ZUI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="VT4-3p-fqn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="319" y="531" width="77" height="77"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="195" width="353" height="341"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iZd-GH-NEu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Fqv-2M-c10">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="452" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="105" height="76"/>
                                 </variation>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fK4-nt-9me">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It will help you to remember it better..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ0-6e-7IN">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="1" y="18" width="253" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write your word on a picture.  And " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txG-VG-tcn">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="1" y="0.0" width="206" height="25"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="WQ0-6e-7IN"/>
+                                        <exclude reference="txG-VG-tcn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="132" width="353" height="39"/>
+                                    <mask key="subviews">
+                                        <include reference="WQ0-6e-7IN"/>
+                                        <include reference="txG-VG-tcn"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.41520598069999998" green="0.6890563609" blue="0.77767097510000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="mow-pq-EHx" secondAttribute="bottom" constant="8" id="APd-gT-0yU"/>
-                            <constraint firstItem="mow-pq-EHx" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" constant="48" id="S5z-6s-NSg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KNx-k5-xYn" secondAttribute="trailing" constant="-16" id="SKN-wB-c7G"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mow-pq-EHx" secondAttribute="trailing" constant="-24" id="TOW-pp-PdX"/>
-                            <constraint firstItem="KNx-k5-xYn" firstAttribute="leading" secondItem="AdN-Im-1ki" secondAttribute="leadingMargin" constant="-16" id="a4X-FI-mnw"/>
-                            <constraint firstItem="mow-pq-EHx" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" constant="48" id="hLG-xT-1KH"/>
-                            <constraint firstItem="KNx-k5-xYn" firstAttribute="top" secondItem="pHi-g7-BJd" secondAttribute="bottom" id="niY-VU-4nw"/>
-                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" id="ubU-A9-3Bm"/>
-                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="mow-pq-EHx" secondAttribute="bottom" constant="8" id="vsk-Pf-Bq6"/>
-                            <constraint firstItem="mow-pq-EHx" firstAttribute="leading" secondItem="KNx-k5-xYn" secondAttribute="leading" id="wNP-EP-ukP"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.71372549019999998" green="0.84313725490000002" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="KNx-k5-xYn"/>
-                                <exclude reference="mow-pq-EHx"/>
-                                <exclude reference="Ici-Mo-fLo"/>
-                                <exclude reference="Eek-xb-ZUI"/>
-                                <exclude reference="iZd-GH-NEu"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="APd-gT-0yU"/>
-                                <exclude reference="ubU-A9-3Bm"/>
-                                <exclude reference="vsk-Pf-Bq6"/>
-                                <exclude reference="S5z-6s-NSg"/>
-                                <exclude reference="TOW-pp-PdX"/>
-                                <exclude reference="hLG-xT-1KH"/>
-                                <exclude reference="wNP-EP-ukP"/>
-                                <exclude reference="SKN-wB-c7G"/>
-                                <exclude reference="a4X-FI-mnw"/>
-                                <exclude reference="niY-VU-4nw"/>
+                                <exclude reference="EYE-qO-0E3"/>
+                                <exclude reference="jsc-eK-dBM"/>
+                                <exclude reference="VT4-3p-fqn"/>
+                                <exclude reference="Fqv-2M-c10"/>
+                                <exclude reference="fK4-nt-9me"/>
                             </mask>
                         </variation>
-                        <variation key="widthClass=compact">
+                        <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="KNx-k5-xYn"/>
-                                <include reference="mow-pq-EHx"/>
-                                <include reference="Ici-Mo-fLo"/>
-                                <include reference="Eek-xb-ZUI"/>
-                                <include reference="iZd-GH-NEu"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="APd-gT-0yU"/>
-                                <exclude reference="ubU-A9-3Bm"/>
-                                <include reference="vsk-Pf-Bq6"/>
-                                <include reference="S5z-6s-NSg"/>
-                                <include reference="TOW-pp-PdX"/>
-                                <exclude reference="hLG-xT-1KH"/>
-                                <include reference="wNP-EP-ukP"/>
-                                <include reference="SKN-wB-c7G"/>
-                                <include reference="a4X-FI-mnw"/>
-                                <include reference="niY-VU-4nw"/>
+                                <include reference="EYE-qO-0E3"/>
+                                <include reference="jsc-eK-dBM"/>
+                                <include reference="VT4-3p-fqn"/>
+                                <include reference="Fqv-2M-c10"/>
+                                <include reference="fK4-nt-9me"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="myImageView" destination="KNx-k5-xYn" id="etR-gd-qAj"/>
-                        <outlet property="wordInput" destination="Ici-Mo-fLo" id="EL5-1Z-HcK"/>
+                        <outlet property="myPhotoView" destination="VT4-3p-fqn" id="JKN-vj-oPz"/>
+                        <outlet property="userTextInput" destination="jsc-eK-dBM" id="Gq5-f1-KCX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tp2-0i-dK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2542.5" y="1193"/>
+            <point key="canvasLocation" x="2542.5" y="1192.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="G6N-5y-ugV">

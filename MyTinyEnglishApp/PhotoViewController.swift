@@ -12,8 +12,11 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     let picker = UIImagePickerController()
     
-    @IBOutlet weak var wordInput: UITextField!
-    @IBOutlet weak var myImageView: UIImageView!
+    
+    @IBOutlet weak var userTextInput: UITextField!
+
+
+    @IBOutlet weak var myPhotoView: UIImageView!
     
     var chosenImage: UIImage!
     
@@ -21,21 +24,23 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         super.viewDidLoad()
         
         picker.delegate = self
-        wordInput.delegate = self
+        userTextInput.delegate = self
     }
     
-    @IBAction func savePhotoWithText(sender: AnyObject) {
-        var userInput = wordInput.text
+    @IBAction func savePhoto(sender: AnyObject) {
+        var userInput = userTextInput.text
         var newImage = textToImage(userInput!, inImage: chosenImage, atPoint: CGPointMake(20, 20))
-        myImageView.image = newImage
+        myPhotoView.image = newImage
         
         UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil);
     }
+
 
     @IBAction func openGallery(sender: AnyObject) {
         picker.sourceType = .PhotoLibrary
         presentViewController(picker, animated: true, completion: nil)
     }
+
     
     @IBAction func takePhoto(sender: AnyObject) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
@@ -56,8 +61,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        myImageView.contentMode = .ScaleAspectFit
-        myImageView.image = chosenImage
+        myPhotoView.contentMode = .ScaleAspectFit
+        myPhotoView.image = chosenImage
         dismissViewControllerAnimated(true, completion: nil)
         
     }
