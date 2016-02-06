@@ -8,11 +8,32 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate  {
     
     let picker = UIImagePickerController()
     
+    @IBOutlet weak var wordInput: UITextField!
     @IBOutlet weak var myImageView: UIImageView!
+    
+    var chosenImage: UIImage!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        picker.delegate = self
+        wordInput.delegate = self
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func savePhotoWithText(sender: AnyObject) {
+        var userInput = wordInput.text
+        //     var newImage = textToImage(userInput!, inImage: UIImage(named:"CharmyKitty")!, atPoint: CGPointMake(20, 20))
+        var newImage = textToImage(userInput!, inImage: chosenImage, atPoint: CGPointMake(20, 20))
+        myImageView.image = newImage
+        
+        UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil);
+    }
 
     @IBAction func openGallery(sender: AnyObject) {
         picker.allowsEditing = false
@@ -20,13 +41,15 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         presentViewController(picker, animated: true, completion: nil)
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        picker.delegate = self
-
-        // Do any additional setup after loading the view.
+    @IBAction func takePhoto(sender: AnyObject) {
+        if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+            picker.allowsEditing = false
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.cameraCaptureMode = .Photo
+            presentViewController(picker, animated: true, completion: nil)
+        } else {
+            noCamera()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +62,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
-        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         myImageView.contentMode = .ScaleAspectFit
         myImageView.image = chosenImage
         dismissViewControllerAnimated(true, completion: nil)
@@ -48,6 +71,61 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func noCamera(){
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .Alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.Default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        presentViewController(alertVC,
+            animated: true,
+            completion: nil)
+    }
+    
+    func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint)->UIImage{
+        
+        // Setup the font specific variables
+        var textColor: UIColor = UIColor.yellowColor()
+        var textFont: UIFont = UIFont(name: "Helvetica Bold", size: 200)!
+        
+        //Setup the image context using the passed image.
+        UIGraphicsBeginImageContext(inImage.size)
+        
+        //Setups up the font attributes that will be later used to dictate how the text should be drawn
+        let textFontAttributes = [
+            NSFontAttributeName: textFont,
+            NSForegroundColorAttributeName: textColor,
+        ]
+        
+        //Put the image into a rectangle as large as the original image.
+        inImage.drawInRect(CGRectMake(0, 0, inImage.size.width, inImage.size.height))
+        
+        // Creating a point within the space that is as bit as the image.
+        var rect: CGRect = CGRectMake(atPoint.x, atPoint.y, inImage.size.width, inImage.size.height)
+        
+        //Now Draw the text into an image.
+        drawText.drawInRect(rect, withAttributes: textFontAttributes)
+        
+        // Create a new image out of the images we have created
+        var newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        // End the context now that we have the image we need
+        UIGraphicsEndImageContext()
+        
+        //And pass it back up to the caller.
+        return newImage
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     /*

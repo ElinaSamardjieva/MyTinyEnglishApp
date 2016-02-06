@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -389,9 +390,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-k5-xYn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="4" y="71" width="392" height="536"/>
-                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Studio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-zG-ePx">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -407,10 +405,16 @@
                                             <action selector="openGallery:" destination="7Vd-eJ-Rfd" id="mLH-jp-HiV"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cd2-iD-Ocx"/>
-                                    <barButtonItem title="Photo" id="dWD-tf-xJR">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xi6-p7-fST"/>
+                                    <barButtonItem title="Make Photo" id="dWD-tf-xJR">
                                         <connections>
                                             <action selector="takePhoto:" destination="7Vd-eJ-Rfd" id="tOk-TV-0Vm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cd2-iD-Ocx"/>
+                                    <barButtonItem title="Save Photo" id="78W-At-Szp">
+                                        <connections>
+                                            <action selector="savePhotoWithText:" destination="7Vd-eJ-Rfd" id="76h-xk-Tg8"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -418,8 +422,16 @@
                                     <rect key="frame" x="4" y="548" width="400" height="44"/>
                                 </variation>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-Mo-fLo">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="152" y="100" width="97" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.96970555404625436" green="1" blue="0.44451218920058377" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.33375704630000003" green="1" blue="0.80785517159999998" alpha="0.69733488480000005" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lsb-zG-ePx" firstAttribute="leading" secondItem="AdN-Im-1ki" secondAttribute="leadingMargin" id="54C-gs-1ar"/>
                             <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="lsb-zG-ePx" secondAttribute="bottom" constant="508" id="70b-8D-NXA"/>
@@ -435,16 +447,17 @@
                                 <exclude reference="KNx-k5-xYn"/>
                                 <exclude reference="lsb-zG-ePx"/>
                                 <exclude reference="mow-pq-EHx"/>
+                                <exclude reference="Ici-Mo-fLo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="SKN-wB-c7G"/>
-                                <exclude reference="a4X-FI-mnw"/>
-                                <exclude reference="niY-VU-4nw"/>
+                                <exclude reference="70b-8D-NXA"/>
+                                <exclude reference="ubU-A9-3Bm"/>
                                 <exclude reference="54C-gs-1ar"/>
                                 <exclude reference="qgQ-6A-J2d"/>
                                 <exclude reference="uLz-Cu-vpN"/>
-                                <exclude reference="70b-8D-NXA"/>
-                                <exclude reference="ubU-A9-3Bm"/>
+                                <exclude reference="SKN-wB-c7G"/>
+                                <exclude reference="a4X-FI-mnw"/>
+                                <exclude reference="niY-VU-4nw"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -452,21 +465,23 @@
                                 <include reference="KNx-k5-xYn"/>
                                 <include reference="lsb-zG-ePx"/>
                                 <include reference="mow-pq-EHx"/>
+                                <include reference="Ici-Mo-fLo"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="SKN-wB-c7G"/>
-                                <include reference="a4X-FI-mnw"/>
-                                <include reference="niY-VU-4nw"/>
+                                <include reference="70b-8D-NXA"/>
+                                <include reference="ubU-A9-3Bm"/>
                                 <include reference="54C-gs-1ar"/>
                                 <include reference="qgQ-6A-J2d"/>
                                 <include reference="uLz-Cu-vpN"/>
-                                <include reference="70b-8D-NXA"/>
-                                <include reference="ubU-A9-3Bm"/>
+                                <include reference="SKN-wB-c7G"/>
+                                <include reference="a4X-FI-mnw"/>
+                                <include reference="niY-VU-4nw"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="myImageView" destination="KNx-k5-xYn" id="etR-gd-qAj"/>
+                        <outlet property="wordInput" destination="Ici-Mo-fLo" id="EL5-1Z-HcK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tp2-0i-dK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
