@@ -30,12 +30,12 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginAction(sender: AnyObject) {
 
-        var username = self.usernameTextField.text
-        var password = self.passwordTextField.text
+        let username = self.usernameTextField.text
+        let password = self.passwordTextField.text
         
         //TODO: see again
         
-        var spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
         spinner.startAnimating()
         
         // Send a request to login
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
             spinner.stopAnimating()
             
             if ((user) != nil) {
-                var alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
+                let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
                 alert.show()
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
                 })
                 
             } else {
-                var alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
                 alert.show()
             }
         })

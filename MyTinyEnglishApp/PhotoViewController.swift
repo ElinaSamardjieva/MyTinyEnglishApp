@@ -35,8 +35,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     @IBAction func savePhoto(sender: AnyObject) {
-        var userInput = userTextInput.text
-        var newImage = textToImage(userInput!, inImage: chosenImage, atPoint: CGPointMake(20, 20))
+        let userInput = userTextInput.text
+        let newImage = textToImage(userInput!, inImage: chosenImage, atPoint: CGPointMake(20, 20))
         myPhotoView.image = newImage
         
         UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil);
@@ -81,8 +81,8 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint)->UIImage{
         
-        var textColor: UIColor = UIColor.yellowColor()
-        var textFont: UIFont = UIFont(name: "Helvetica Bold", size: 200)!
+        let textColor: UIColor = UIColor.yellowColor()
+        let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 200)!
         
         //Setup the image context using the passed image.
         UIGraphicsBeginImageContext(inImage.size)
@@ -97,13 +97,13 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         inImage.drawInRect(CGRectMake(0, 0, inImage.size.width, inImage.size.height))
         
         // Creating a point within the space that is as bit as the image.
-        var rect: CGRect = CGRectMake(atPoint.x, atPoint.y, inImage.size.width, inImage.size.height)
+        let rect: CGRect = CGRectMake(atPoint.x, atPoint.y, inImage.size.width, inImage.size.height)
         
         //Now Draw the text into an image.
         drawText.drawInRect(rect, withAttributes: textFontAttributes)
         
         // Create a new image out of the images we have created
-        var newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         
         // End the context now that we have the image we need
         UIGraphicsEndImageContext()

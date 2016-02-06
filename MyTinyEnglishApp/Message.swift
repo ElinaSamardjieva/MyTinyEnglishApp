@@ -11,7 +11,7 @@ import UIKit
 class Message: NSObject {
     
     func showErrorMessage(inputStr:String) {
-        var errorMessage = UIAlertView(title: "Try again", message: inputStr, delegate: self, cancelButtonTitle: "OK")
+        let errorMessage = UIAlertView(title: "Try again", message: inputStr, delegate: self, cancelButtonTitle: "OK")
         errorMessage.show()
     }
 }

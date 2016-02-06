@@ -33,14 +33,12 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func registerAction(sender: AnyObject) {
-        var email = self.emailTextField.text
-        var username = self.usernameTextField.text
-        var password = self.passwordTextField.text
-        var confirmPassword = self.confirmPasswordTextField.text
+        let email = self.emailTextField.text
+        let username = self.usernameTextField.text
+        let password = self.passwordTextField.text
+        let confirmPassword = self.confirmPasswordTextField.text
         
         let validator = Validator()
-        let message = Message()
-        var textError = ""
         
         if(!(validator.validateEmail(email!))) {
             return
@@ -55,10 +53,10 @@ class RegisterViewController: UIViewController {
         } else if (!(validator.validateArePasswordsEqual(password!, inputConfirmPassword: confirmPassword!))) {
             return
         } else {
-            var spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+            let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
             spinner.startAnimating()
             
-            var newUser = PFUser()
+            let newUser = PFUser()
             
             newUser.username = username
             newUser.password = password
@@ -70,11 +68,11 @@ class RegisterViewController: UIViewController {
                 // Stop the spinner
                 spinner.stopAnimating()
                 if ((error) != nil) {
-                    var alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     
                 } else {
-                    var alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
+                    let alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     
                     //TODO: see again
