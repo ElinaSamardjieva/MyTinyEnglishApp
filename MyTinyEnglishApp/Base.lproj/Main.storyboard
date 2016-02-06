@@ -143,7 +143,7 @@
                                             <rect key="frame" x="137" y="153" width="87" height="30"/>
                                         </variation>
                                         <connections>
-                                            <segue destination="7Vd-eJ-Rfd" kind="show" id="7wV-sW-kxU"/>
+                                            <segue destination="7Vd-eJ-Rfd" kind="show" id="PUe-hf-sst"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHp-zR-bLu">
@@ -391,13 +391,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-k5-xYn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="4" y="144" width="392" height="356"/>
+                                    <rect key="frame" x="27" y="111" width="365" height="392"/>
                                 </variation>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mow-pq-EHx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="QEG-Mu-WTg"/>
+                                    <constraint firstAttribute="height" constant="44" id="YA9-id-Yeo"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem title="Gallery" id="7j9-oT-Cik">
@@ -421,11 +422,13 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="QEG-Mu-WTg"/>
+                                        <exclude reference="YA9-id-Yeo"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="QEG-Mu-WTg"/>
+                                        <exclude reference="QEG-Mu-WTg"/>
+                                        <include reference="YA9-id-Yeo"/>
                                     </mask>
                                 </variation>
                             </toolbar>
@@ -434,19 +437,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="108" y="106" width="185" height="30"/>
+                                    <rect key="frame" x="117" y="79" width="185" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.33375704630000003" green="1" blue="0.80785517159999998" alpha="0.69733488480000005" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="mow-pq-EHx" secondAttribute="bottom" constant="8" id="APd-gT-0yU"/>
+                            <constraint firstItem="mow-pq-EHx" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" constant="48" id="S5z-6s-NSg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KNx-k5-xYn" secondAttribute="trailing" constant="-16" id="SKN-wB-c7G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mow-pq-EHx" secondAttribute="trailing" constant="-24" id="TOW-pp-PdX"/>
                             <constraint firstItem="KNx-k5-xYn" firstAttribute="leading" secondItem="AdN-Im-1ki" secondAttribute="leadingMargin" constant="-16" id="a4X-FI-mnw"/>
                             <constraint firstItem="mow-pq-EHx" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" constant="48" id="hLG-xT-1KH"/>
                             <constraint firstItem="KNx-k5-xYn" firstAttribute="top" secondItem="pHi-g7-BJd" secondAttribute="bottom" id="niY-VU-4nw"/>
                             <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" id="ubU-A9-3Bm"/>
+                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="mow-pq-EHx" secondAttribute="bottom" constant="8" id="vsk-Pf-Bq6"/>
                             <constraint firstItem="mow-pq-EHx" firstAttribute="leading" secondItem="KNx-k5-xYn" secondAttribute="leading" id="wNP-EP-ukP"/>
                         </constraints>
                         <variation key="default">
@@ -459,11 +464,13 @@
                                 <exclude reference="SKN-wB-c7G"/>
                                 <exclude reference="a4X-FI-mnw"/>
                                 <exclude reference="niY-VU-4nw"/>
+                                <exclude reference="S5z-6s-NSg"/>
                                 <exclude reference="TOW-pp-PdX"/>
                                 <exclude reference="hLG-xT-1KH"/>
                                 <exclude reference="wNP-EP-ukP"/>
                                 <exclude reference="APd-gT-0yU"/>
                                 <exclude reference="ubU-A9-3Bm"/>
+                                <exclude reference="vsk-Pf-Bq6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -476,11 +483,13 @@
                                 <include reference="SKN-wB-c7G"/>
                                 <include reference="a4X-FI-mnw"/>
                                 <include reference="niY-VU-4nw"/>
+                                <include reference="S5z-6s-NSg"/>
                                 <include reference="TOW-pp-PdX"/>
-                                <include reference="hLG-xT-1KH"/>
+                                <exclude reference="hLG-xT-1KH"/>
                                 <include reference="wNP-EP-ukP"/>
-                                <include reference="APd-gT-0yU"/>
-                                <include reference="ubU-A9-3Bm"/>
+                                <exclude reference="APd-gT-0yU"/>
+                                <exclude reference="ubU-A9-3Bm"/>
+                                <include reference="vsk-Pf-Bq6"/>
                             </mask>
                         </variation>
                     </view>
