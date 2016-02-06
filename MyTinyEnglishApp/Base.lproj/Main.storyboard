@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -386,6 +388,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-k5-xYn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="27" y="111" width="365" height="392"/>
+                                </variation>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mow-pq-EHx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="QEG-Mu-WTg"/>
+                                    <constraint firstAttribute="height" constant="44" id="YA9-id-Yeo"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Gallery" id="7j9-oT-Cik">
+                                        <connections>
+                                            <action selector="openGallery:" destination="7Vd-eJ-Rfd" id="mLH-jp-HiV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xi6-p7-fST"/>
+                                    <barButtonItem title="Make Photo" id="dWD-tf-xJR">
+                                        <connections>
+                                            <action selector="takePhoto:" destination="7Vd-eJ-Rfd" id="tOk-TV-0Vm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cd2-iD-Ocx"/>
+                                    <barButtonItem title="Save Photo" id="78W-At-Szp">
+                                        <connections>
+                                            <action selector="savePhotoWithText:" destination="7Vd-eJ-Rfd" id="76h-xk-Tg8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QEG-Mu-WTg"/>
+                                        <exclude reference="YA9-id-Yeo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="QEG-Mu-WTg"/>
+                                        <include reference="YA9-id-Yeo"/>
+                                    </mask>
+                                </variation>
+                            </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-Mo-fLo">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -394,49 +440,61 @@
                                     <rect key="frame" x="117" y="79" width="185" height="30"/>
                                 </variation>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFs-WV-Ylk">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem title="Gallery" id="bp9-5d-rdi">
-                                        <connections>
-                                            <action selector="openGallery:" destination="7Vd-eJ-Rfd" id="v5M-yq-NXY"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Save" id="nQN-o8-JFm">
-                                        <connections>
-                                            <action selector="savePhoto:" destination="7Vd-eJ-Rfd" id="fte-7s-04e"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Item" id="4vn-Wq-TCN"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
-                                </variation>
-                            </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CharmyKitty" translatesAutoresizingMaskIntoConstraints="NO" id="oMW-id-Fis">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="56" y="205" width="288" height="253"/>
-                                </variation>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.33375704630000003" green="1" blue="0.80785517159999998" alpha="0.69733488480000005" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="mow-pq-EHx" secondAttribute="bottom" constant="8" id="APd-gT-0yU"/>
+                            <constraint firstItem="mow-pq-EHx" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" constant="48" id="S5z-6s-NSg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KNx-k5-xYn" secondAttribute="trailing" constant="-16" id="SKN-wB-c7G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mow-pq-EHx" secondAttribute="trailing" constant="-24" id="TOW-pp-PdX"/>
+                            <constraint firstItem="KNx-k5-xYn" firstAttribute="leading" secondItem="AdN-Im-1ki" secondAttribute="leadingMargin" constant="-16" id="a4X-FI-mnw"/>
+                            <constraint firstItem="mow-pq-EHx" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" constant="48" id="hLG-xT-1KH"/>
+                            <constraint firstItem="KNx-k5-xYn" firstAttribute="top" secondItem="pHi-g7-BJd" secondAttribute="bottom" id="niY-VU-4nw"/>
+                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="KNx-k5-xYn" secondAttribute="bottom" id="ubU-A9-3Bm"/>
+                            <constraint firstItem="pvd-Q9-bPv" firstAttribute="top" secondItem="mow-pq-EHx" secondAttribute="bottom" constant="8" id="vsk-Pf-Bq6"/>
+                            <constraint firstItem="mow-pq-EHx" firstAttribute="leading" secondItem="KNx-k5-xYn" secondAttribute="leading" id="wNP-EP-ukP"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="KNx-k5-xYn"/>
+                                <exclude reference="mow-pq-EHx"/>
                                 <exclude reference="Ici-Mo-fLo"/>
-                                <exclude reference="NFs-WV-Ylk"/>
-                                <exclude reference="oMW-id-Fis"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="SKN-wB-c7G"/>
+                                <exclude reference="a4X-FI-mnw"/>
+                                <exclude reference="niY-VU-4nw"/>
+                                <exclude reference="S5z-6s-NSg"/>
+                                <exclude reference="TOW-pp-PdX"/>
+                                <exclude reference="hLG-xT-1KH"/>
+                                <exclude reference="wNP-EP-ukP"/>
+                                <exclude reference="APd-gT-0yU"/>
+                                <exclude reference="ubU-A9-3Bm"/>
+                                <exclude reference="vsk-Pf-Bq6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="KNx-k5-xYn"/>
+                                <include reference="mow-pq-EHx"/>
                                 <include reference="Ici-Mo-fLo"/>
-                                <include reference="NFs-WV-Ylk"/>
-                                <include reference="oMW-id-Fis"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="SKN-wB-c7G"/>
+                                <include reference="a4X-FI-mnw"/>
+                                <include reference="niY-VU-4nw"/>
+                                <include reference="S5z-6s-NSg"/>
+                                <include reference="TOW-pp-PdX"/>
+                                <exclude reference="hLG-xT-1KH"/>
+                                <include reference="wNP-EP-ukP"/>
+                                <exclude reference="APd-gT-0yU"/>
+                                <exclude reference="ubU-A9-3Bm"/>
+                                <include reference="vsk-Pf-Bq6"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="myImageView" destination="KNx-k5-xYn" id="etR-gd-qAj"/>
                         <outlet property="wordInput" destination="Ici-Mo-fLo" id="EL5-1Z-HcK"/>
                     </connections>
                 </viewController>
