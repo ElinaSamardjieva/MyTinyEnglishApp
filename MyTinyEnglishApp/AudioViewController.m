@@ -66,7 +66,7 @@ NSTimer *timer;
   
     //Blinking
     timer = [NSTimer
-                      scheduledTimerWithTimeInterval:(NSTimeInterval)(1.0)
+                      scheduledTimerWithTimeInterval:(NSTimeInterval)(0.7)
                       target:self
                       selector:@selector(blink)
                       userInfo:nil

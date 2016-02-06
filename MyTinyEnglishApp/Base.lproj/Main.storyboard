@@ -134,6 +134,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9sh-ge-2Gk"/>
                     <connections>
+                        <outlet property="charmyKitty" destination="lbm-eL-Lbl" id="gkK-Kr-Zpx"/>
                         <outlet property="usernameLabel" destination="d2Q-Xf-0lR" id="uIY-G3-woq"/>
                     </connections>
                 </viewController>

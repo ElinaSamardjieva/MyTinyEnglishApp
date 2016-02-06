@@ -13,6 +13,7 @@ import QuartzCore
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var charmyKitty: UIImageView!
     
     
     override func viewWillAppear(animated: Bool) {
@@ -36,6 +37,15 @@ class HomeViewController: UIViewController {
         self.usernameLabel.layer.borderColor = UIColor.grayColor().CGColor
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //AnimateCharmyKitty
+        
+        //speed, delay
+        UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.charmyKitty.alpha = 1
+            
+            self.charmyKitty.center.x = 1
+            }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,6 +62,17 @@ class HomeViewController: UIViewController {
             self.presentViewController(viewController, animated: true, completion: nil)
         })
     }
-
+    
+    func moveImage(view: UIImageView){
+        var toPoint: CGPoint = CGPointMake(0.0, -10.0)
+        var fromPoint : CGPoint = CGPointZero
+        
+        var movement = CABasicAnimation(keyPath: "movement")
+        movement.additive = true
+        movement.fromValue =  NSValue(CGPoint: fromPoint)
+        movement.toValue =  NSValue(CGPoint: toPoint)
+        movement.duration = 0.3
+        
+        view.layer.addAnimation(movement, forKey: "move")
+    }
 }
-
