@@ -25,17 +25,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9NY-fJ-lIA"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Iu1-Qx-WyS"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Iyj-Db-JMZ"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="N15-sn-TsO"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QCq-Lq-Fos"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="190" id="QGM-CE-Vbu"/>
-                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QSY-6Z-37o"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="EwQ-UJ-AkK" secondAttribute="bottom" constant="193" id="XPy-dn-rZE"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="Xhz-kG-qct"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="160" id="awo-yS-uJm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EwQ-UJ-AkK" secondAttribute="trailing" constant="160" id="f3i-VA-432"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ixC-6c-pA1"/>
+                            <constraint firstItem="EwQ-UJ-AkK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rM4-8s-4FG"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="tTE-Zv-88b"/>
                             <constraint firstItem="EwQ-UJ-AkK" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="2:5" id="x7c-OH-TSu"/>
                         </constraints>

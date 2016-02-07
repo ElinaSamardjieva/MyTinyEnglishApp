@@ -10,16 +10,12 @@ import UIKit
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate  {
     
+    var chosenImage: UIImage!
     let picker = UIImagePickerController()
     
     @IBOutlet weak var charmyKitty: UIImageView!
-    
     @IBOutlet weak var userTextInput: UITextField!
-
-
     @IBOutlet weak var myPhotoView: UIImageView!
-    
-    var chosenImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +23,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         picker.delegate = self
         userTextInput.delegate = self
         
+        //Animation
         UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
             self.charmyKitty.alpha = 1
             
@@ -34,20 +31,10 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             }, completion: nil)
     }
     
-    @IBAction func savePhoto(sender: AnyObject) {
-        let userInput = userTextInput.text
-        let newImage = textToImage(userInput!, inImage: chosenImage, atPoint: CGPointMake(20, 20))
-        myPhotoView.image = newImage
-        
-        UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil);
-    }
-
-
     @IBAction func openGallery(sender: AnyObject) {
         picker.sourceType = .PhotoLibrary
         presentViewController(picker, animated: true, completion: nil)
     }
-
     
     @IBAction func takePhoto(sender: AnyObject) {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
@@ -59,25 +46,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             noCamera()
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    //DELEGATES
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
-    {
-        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        myPhotoView.contentMode = .ScaleAspectFit
-        myPhotoView.image = chosenImage
-        dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     
     func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint)->UIImage{
         
@@ -111,6 +79,28 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         //And pass it back up to the caller.
         return newImage
         
+    }
+    
+    @IBAction func savePhoto(sender: AnyObject) {
+        let userInput = userTextInput.text
+        let newImage = textToImage(userInput!, inImage: chosenImage, atPoint: CGPointMake(20, 20))
+        myPhotoView.image = newImage
+        
+        UIImageWriteToSavedPhotosAlbum(newImage, nil, nil, nil);
+    }
+    
+    // Delegates
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        myPhotoView.contentMode = .ScaleAspectFit
+        myPhotoView.image = chosenImage
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func noCamera(){
