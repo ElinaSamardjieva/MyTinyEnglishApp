@@ -12,10 +12,12 @@ class DictionaryViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textInput: UITextField!
     @IBOutlet weak var textField: UITextView!
-
+    @IBOutlet weak var charmyKitty: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.animateImage()
         
         textInput.delegate = self
     }
@@ -38,4 +40,13 @@ class DictionaryViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    func animateImage() {
+        UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.charmyKitty.alpha = 1
+            
+            self.charmyKitty.center.x = 1
+            }, completion: nil)
+    }
+    
 }

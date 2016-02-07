@@ -17,11 +17,14 @@
 @implementation AudioViewController
 
 @synthesize recordingProgress, yourLabel, charmyKitty;
+
 BOOL blinkStatus = NO;
 NSTimer *timer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self animateImage];
     
     //Siri
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
@@ -44,19 +47,6 @@ NSTimer *timer;
     recorder.delegate = self;
     recorder.meteringEnabled = "YES";
     [recorder prepareToRecord];
-    
-    
-    //Kitty
-   // [charmyKitty setFrame:CGRectMake(100, 100, charmyKitty.frame.size.width, charmyKitty.frame.size.height)];
-    
-    [UIView animateWithDuration:1.0
-                          delay:0.5
-                        options: UIViewAnimationCurveEaseOut
-                     animations:^{
-                         [charmyKitty setFrame:CGRectMake(-100, 0, charmyKitty.frame.size.width, charmyKitty.frame.size.height)];
-                     }
-                     completion:^(BOOL finished){
-                     }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,6 +112,18 @@ NSTimer *timer;
         yourLabel.backgroundColor = [UIColor redColor];
         blinkStatus = NO;
     }
+}
+
+-(void)animateImage{
+    [UIView animateWithDuration:1.0
+                          delay:0.5
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         [charmyKitty setFrame:CGRectMake(-100, 0, charmyKitty.frame.size.width, charmyKitty.frame.size.height)];
+                     }
+                     completion:^(BOOL finished){
+                     }];
+
 }
 
 @end

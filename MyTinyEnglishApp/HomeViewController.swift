@@ -35,17 +35,7 @@ class HomeViewController: UIViewController {
         }
         
         self.usernameLabel.layer.borderColor = UIColor.grayColor().CGColor
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //AnimateCharmyKitty
-        
-        //speed, delay
-        UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
-            self.charmyKitty.alpha = 1
-            
-            self.charmyKitty.center.x = 1
-            }, completion: nil)
+        self.animateImage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,5 +51,13 @@ class HomeViewController: UIViewController {
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
             self.presentViewController(viewController, animated: true, completion: nil)
         })
+    }
+    
+    func animateImage() {
+        UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.charmyKitty.alpha = 1
+            
+            self.charmyKitty.center.x = 1
+            }, completion: nil)
     }
 }

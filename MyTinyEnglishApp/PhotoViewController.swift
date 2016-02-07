@@ -23,12 +23,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         picker.delegate = self
         userTextInput.delegate = self
         
-        //Animation
-        UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
-            self.charmyKitty.alpha = 1
-            
-            self.charmyKitty.center.x = 1
-            }, completion: nil)
+        self.animateImage()
     }
     
     @IBAction func openGallery(sender: AnyObject) {
@@ -122,6 +117,14 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func animateImage() {
+        UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.charmyKitty.alpha = 1
+            
+            self.charmyKitty.center.x = 1
+            }, completion: nil)
     }
 
 }
