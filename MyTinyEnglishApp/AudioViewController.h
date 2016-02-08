@@ -15,10 +15,8 @@
 @property (weak, nonatomic) NSTimer *timer;
 @property BOOL blinkStatus;
 
-
 - (IBAction)playSpeech:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *textToSpeak;
-
 
 @property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 
