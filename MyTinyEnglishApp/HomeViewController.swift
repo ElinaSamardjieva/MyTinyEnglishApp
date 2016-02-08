@@ -19,7 +19,6 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         if (PFUser.currentUser() == nil) {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
                 self.presentViewController(viewController, animated: true, completion: nil)
             })
@@ -29,22 +28,14 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Show the current visitor's username
         if let pUserName = PFUser.currentUser()?["username"] as? String {
             self.usernameLabel.text = "Welcome, " + pUserName + "!"
         }
-        
-        self.usernameLabel.layer.borderColor = UIColor.grayColor().CGColor
+
         self.animateImage()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func logoutAction(sender: AnyObject) {
-        // Send a request to log out a user
         PFUser.logOut()
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -56,7 +47,6 @@ class HomeViewController: UIViewController {
     func animateImage() {
         UIView.animateWithDuration(0.75, delay: 0.50, options: UIViewAnimationOptions.CurveLinear, animations: {
             self.charmyKitty.alpha = 1
-            
             self.charmyKitty.center.x = 1
             }, completion: nil)
     }

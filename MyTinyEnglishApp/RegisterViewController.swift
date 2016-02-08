@@ -18,19 +18,10 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Turning off the Autocorrection
+    
         emailTextField.autocorrectionType = .No
         usernameTextField.autocorrectionType = .No
-        
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     @IBAction func registerAction(sender: AnyObject) {
         let email = self.emailTextField.text
@@ -62,10 +53,8 @@ class RegisterViewController: UIViewController {
             newUser.password = password
             newUser.email = email
             
-            // Sign up the user asynchronously
             newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
-                
-                // Stop the spinner
+
                 spinner.stopAnimating()
                 if ((error) != nil) {
                     let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
@@ -83,14 +72,4 @@ class RegisterViewController: UIViewController {
             })
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

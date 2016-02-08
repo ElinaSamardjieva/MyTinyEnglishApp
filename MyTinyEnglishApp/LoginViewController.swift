@@ -17,41 +17,24 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Turning off the Autocorrection
         usernameTextField.autocorrectionType = .No
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     @IBAction func loginAction(sender: AnyObject) {
 
         let username = self.usernameTextField.text
         let password = self.passwordTextField.text
         
-        //TODO: see again
-        
         let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
         spinner.startAnimating()
         
-        // Send a request to login
         PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user, error) -> Void in
-            
-            // Stop the spinner
+
             spinner.stopAnimating()
             
             if ((user) != nil) {
                 let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
                 alert.show()
-                
-          //      let alert = UIAlertController(title:"Success", message:"Logged In", preferredStyle: .Alert)
-          //      let alertAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-          //      alert.addAction(alertAction)
-          //      self.presentViewController(alert, animated: true, completion: nil)
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                    

@@ -13,20 +13,16 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *charmyKitty;
 
-//Siri
 @property (weak, nonatomic) IBOutlet UITextView *textToSpeak;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
 @property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 
-
-//Recording audio
 @property (weak, nonatomic) IBOutlet UILabel *recordingProgress;
 @property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 
-//Blinking
-@property (weak, nonatomic) IBOutlet UILabel *yourLabel;
+@property (weak, nonatomic) IBOutlet UILabel *recordingNotificatorLabel;
 
 - (IBAction)recordAudio:(id)sender;
 - (IBAction)stopRecordingAudio:(id)sender;

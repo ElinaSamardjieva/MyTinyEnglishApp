@@ -16,7 +16,7 @@
 
 @implementation AudioViewController
 
-@synthesize recordingProgress, yourLabel, charmyKitty;
+@synthesize recordingProgress, recordingNotificatorLabel, charmyKitty;
 
 BOOL blinkStatus = NO;
 NSTimer *timer;
@@ -88,7 +88,7 @@ NSTimer *timer;
 - (IBAction)stopRecordingAudio:(id)sender {
     recordingProgress.hidden = true;
     [timer invalidate];
-    yourLabel.backgroundColor = [UIColor whiteColor];
+    recordingNotificatorLabel.backgroundColor = [UIColor whiteColor];
     
     [recorder stop];
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -106,10 +106,10 @@ NSTimer *timer;
 
 -(void)blink{
     if(blinkStatus == NO){
-        yourLabel.backgroundColor = [UIColor whiteColor];
+        recordingNotificatorLabel.backgroundColor = [UIColor whiteColor];
         blinkStatus = YES;
     }else {
-        yourLabel.backgroundColor = [UIColor redColor];
+        recordingNotificatorLabel.backgroundColor = [UIColor redColor];
         blinkStatus = NO;
     }
 }
