@@ -13,7 +13,7 @@ Think for yourself as a user. You will have different options to study. The appl
 
 2. Vizualization side or **Photo studio**. Here you will be able to take pictures of the things around you - we all know the things in our home, our job or favorite places. Taking pictures of well known things will help you to remember easier the new words.
 
-3. Memorization side or **Library**. Think of the Library as a big dictionary where you will be able to explain yourself the new words. You will be able to save new words, add your own explanations about them or delete them.
+3. **Dictionary** - it is a big dictionary where you will be able to search words and read their explanation.
 
 
 ## Functionality
@@ -22,5 +22,5 @@ Think for yourself as a user. You will have different options to study. The appl
   - Record and play audio
   - Use Siri for listening pronounciation of wanted word
   - Take pictures
-  - Add new words and their explanation - list them, save them in SQLite or delete them
+  - Dictionary where you could search english words and their meaning
 
