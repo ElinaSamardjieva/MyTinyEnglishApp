@@ -16,10 +16,7 @@
 
 @implementation AudioViewController
 
-@synthesize recordingProgress, recordingNotificatorLabel, charmyKitty;
-
-BOOL blinkStatus = NO;
-NSTimer *timer;
+@synthesize recordingProgress, recordingNotificatorLabel, charmyKitty, blinkStatus, timer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,7 +42,6 @@ NSTimer *timer;
 
     recorder = [[AVAudioRecorder alloc]initWithURL:outputFileURL settings: recordSetting error:NULL];
     recorder.delegate = self;
-    recorder.meteringEnabled = "YES";
     [recorder prepareToRecord];
 }
 
@@ -54,20 +50,16 @@ NSTimer *timer;
 
 }
 
-//Siri
-- (IBAction)playPauseButtonPressed:(UIButton *)sender {
+- (IBAction)playSpeech:(id)sender {
     [self.textToSpeak resignFirstResponder];
     AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:self.textToSpeak.text];
-    //utterance.rate = AVSpeechUtteranceMinimumSpeechRate; //Speak slowly
     utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"uk"];
     [self.synthesizer speakUtterance:utterance];
 }
 
-//Audio recorder
 - (IBAction)recordAudio:(id)sender {
     recordingProgress.hidden = false;
   
-    //Blinking
     timer = [NSTimer
                       scheduledTimerWithTimeInterval:(NSTimeInterval)(0.7)
                       target:self

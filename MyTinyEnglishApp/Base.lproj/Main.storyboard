@@ -546,29 +546,6 @@
                                             <rect key="frame" x="81" y="118" width="218" height="50"/>
                                         </variation>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suD-A5-sus">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="19"/>
-                                        <state key="normal" title="Ask Me"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="108" y="171" width="144" height="63"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="116" y="186" width="128" height="63"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="playPauseButtonPressed:" destination="fC3-vs-Br2" eventType="touchUpInside" id="7gk-in-nuz"/>
-                                        </connections>
-                                    </button>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE1-ff-y2m">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -679,13 +656,22 @@
                                             <rect key="frame" x="172" y="370" width="30" height="30"/>
                                         </variation>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekl-Zr-IiU">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="160" y="204" width="46" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="playSpeech:" destination="fC3-vs-Br2" eventType="touchUpInside" id="eHj-7n-6nz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="sQC-mV-4ac"/>
                                         <exclude reference="pEU-gS-00g"/>
-                                        <exclude reference="suD-A5-sus"/>
                                         <exclude reference="iE1-ff-y2m"/>
                                         <exclude reference="Ey5-f6-Fam"/>
                                         <exclude reference="mrA-9F-ar6"/>
@@ -693,6 +679,7 @@
                                         <exclude reference="zMF-3F-bKf"/>
                                         <exclude reference="3xZ-Dy-IVQ"/>
                                         <exclude reference="6Ka-Eq-yGX"/>
+                                        <exclude reference="ekl-Zr-IiU"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -700,7 +687,6 @@
                                     <mask key="subviews">
                                         <include reference="sQC-mV-4ac"/>
                                         <include reference="pEU-gS-00g"/>
-                                        <include reference="suD-A5-sus"/>
                                         <include reference="iE1-ff-y2m"/>
                                         <include reference="Ey5-f6-Fam"/>
                                         <include reference="mrA-9F-ar6"/>
@@ -713,6 +699,7 @@
                                     <mask key="subviews">
                                         <include reference="zMF-3F-bKf"/>
                                         <include reference="6Ka-Eq-yGX"/>
+                                        <include reference="ekl-Zr-IiU"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -746,7 +733,6 @@
                     <connections>
                         <outlet property="charmyKitty" destination="Ey5-f6-Fam" id="xU4-fD-aku"/>
                         <outlet property="playButton" destination="mrA-9F-ar6" id="gi8-ex-rJj"/>
-                        <outlet property="playPauseButton" destination="suD-A5-sus" id="BIi-MD-uzr"/>
                         <outlet property="recordButton" destination="3xZ-Dy-IVQ" id="dii-6R-ANI"/>
                         <outlet property="recordingNotificatorLabel" destination="6Ka-Eq-yGX" id="Old-DH-vGD"/>
                         <outlet property="recordingProgress" destination="iE1-ff-y2m" id="RSc-Ok-S63"/>

@@ -12,9 +12,14 @@
 @interface AudioViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *charmyKitty;
+@property (weak, nonatomic) NSTimer *timer;
+@property BOOL blinkStatus;
 
+
+- (IBAction)playSpeech:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *textToSpeak;
-@property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
+
+
 @property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 
 @property (weak, nonatomic) IBOutlet UILabel *recordingProgress;
