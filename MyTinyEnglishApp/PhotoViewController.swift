@@ -45,7 +45,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     func textToImage(drawText: NSString, inImage: UIImage, atPoint:CGPoint)->UIImage{
         
         let textColor: UIColor = UIColor.yellowColor()
-        let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 30)!
+        let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 200)!
         
         UIGraphicsBeginImageContext(inImage.size)
 
