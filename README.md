@@ -23,4 +23,10 @@ Think for yourself as a user. You will have different options to study. The appl
   - Use Siri for listening pronounciation of wanted word
   - Take pictures
   - Dictionary where you could search english words and their meaning
+  
+## Video
+
+Here is an youtube video with the main functionality of the app: 
+https://www.youtube.com/watch?v=6G8Q_WNDw1k
+
 
